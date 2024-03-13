@@ -1,0 +1,61 @@
+.lorem-ipsum-is9,
+.strength-training-power {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.strength-training-power {
+  width: 244px;
+  font-weight: 800;
+  height: 66px;
+}
+.lorem-ipsum-is9 {
+  width: 408px;
+  font-size: 17.1px;
+  line-height: 24.73px;
+  color: #c9c9c9;
+  height: 60px;
+}
+.buttom-3-inner {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: #0065fd;
+}
+.learn-more5 {
+  position: absolute;
+  top: 23.58%;
+  left: 21.24%;
+  line-height: 25.92px;
+}
+.buttom-32 {
+  width: 137px;
+  position: relative;
+  height: 49.2px;
+  font-size: 13.2px;
+}
+.strength-training-power-lifter-group {
+  position: absolute;
+  top: 329.7px;
+  left: -0.5px;
+  background-color: rgba(46, 54, 60, 0.5);
+  backdrop-filter: blur(23.42px);
+  border: 0.9px solid rgba(255, 255, 255, 0.2);
+  box-sizing: border-box;
+  width: 660.5px;
+  height: 277.7px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 39px 40px;
+  gap: 13px 0;
+  text-align: left;
+  font-size: 27.5px;
+  color: #fff;
+  font-family: Inter;
+}

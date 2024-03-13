@@ -1,0 +1,75 @@
+.program {
+  font-size: 24px;
+}
+.program,
+.strenght-training {
+  margin-block-start: 0;
+  margin-block-end: 40px;
+}
+.program-strenght-training-container {
+  position: absolute;
+  top: 40.1px;
+  left: 867.3px;
+  line-height: 45%;
+  display: inline-block;
+  width: 221.5px;
+  height: 266.1px;
+}
+.business-area {
+  margin-block-start: 0;
+  margin-block-end: 40px;
+  font-size: 20px;
+}
+.newsroom {
+  margin: 0;
+}
+.about-us-company-container {
+  position: absolute;
+  top: 40.1px;
+  left: 1262.5px;
+  line-height: 45%;
+  display: inline-block;
+  width: 221.5px;
+  height: 266.1px;
+  font-size: 24px;
+}
+.gym {
+  color: #0065fd;
+}
+.max-gym {
+  position: absolute;
+  top: 0;
+  left: 4px;
+  font-size: 46px;
+  font-family: Aboreto;
+  text-align: center;
+}
+.lorem-ipsum-is8 {
+  position: absolute;
+  top: 95.1px;
+  left: 0;
+  font-size: 21px;
+  line-height: 42px;
+  text-align: justify;
+  display: inline-block;
+  width: 648px;
+  height: 159px;
+}
+.program-strenght-training-card-parent {
+  width: 1484px;
+  position: relative;
+  height: 306.2px;
+}
+.destop-inner2 {
+  position: absolute;
+  top: 3475px;
+  left: 227px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  text-align: left;
+  font-size: 20px;
+  color: #fff;
+  font-family: Inter;
+}

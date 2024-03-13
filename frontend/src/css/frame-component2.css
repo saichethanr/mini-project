@@ -1,0 +1,107 @@
+.gymeye {
+  position: relative;
+}
+.home-parent {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 0 90px;
+  font-size: 27px;
+}
+.gymeye-parent,
+.login-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.login-wrapper {
+  width: 169px;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  height: 51px;
+  padding: 12px 46px;
+  font-size: 32px;
+}
+.gymeye-parent {
+  position: absolute;
+  top: 0;
+  left: 174px;
+  backdrop-filter: blur(4px);
+  padding: 30px 3px;
+  gap: 0 379px;
+  text-align: center;
+  font-size: 33px;
+  color: #fff;
+  font-family: Inter;
+}
+/* Navbar styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333; /* Example background color */
+  color: #fff; /* Example text color */
+  padding: 10px 20px;
+}
+
+/* Brand styling */
+.brand-text {
+  font-weight: bold;
+}
+
+/* Navbar styling */
+.navbar {
+  position: relative; /* Ensure proper stacking context */
+  z-index: 1000; /* Increase z-index to ensure it overlaps other elements */
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  padding: 15px 20px; /* Increased padding for height */
+  height: 60px; /* Increased height */
+}
+
+/* Navbar links styling */
+.navbar-links ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.navbar-links ul li {
+  display: inline-block;
+  margin-right: 100px; /* Spacing between links */
+}
+
+.navbar-links ul li:last-child {
+  margin-right: 0;
+}
+
+.nav-link {
+  color: #fff; /* White link color */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s; /* Smooth transition for hover effect */
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+  color: rgb(72, 0, 255); /* Yellow link color on hover (example) */
+}
+
+/* Login styling */
+.login-text {
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s; /* Smooth transition for hover effect */
+  margin-left: 50px; /* Adjust position */
+  padding: 20px 10px;
+  border: none;
+  background-color: #000; /* Initial background color */
+}
+
+.login-text:hover {
+  color: #fff; /* White color on hover */
+  background-color: rgb(13, 0, 255); /* Blue background on hover */
+}
