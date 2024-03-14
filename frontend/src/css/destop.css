@@ -238,6 +238,31 @@
   width: 507px;
   height: 36px;
 }
+
+.buttom-1 {
+  position: absolute;
+  top: 5%;
+  left: 45%;
+  transform: translate(-50%, -50%);
+}
+
+/* Style the button */
+.buttom-1 button {
+  background-color: #0065fd;
+  color: white;
+  padding: 20px 70px; /* Adjust padding for larger button */
+  border: none;
+  border-radius: 10px; /* Adjust border radius for rounded corners */
+  font-size: 24px; /* Adjust font size */
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; /* Apply hover effect */
+}
+
+/* Apply hover effect */
+.buttom-1 button:hover {
+  transform: scale(1.05);
+}
+
 .frame-child3 {
   position: absolute;
   top: 0;
@@ -344,7 +369,8 @@
   text-align: justify;
 }
 .buttom-1-child {
-  position: absolute;
+  position:relative;
+  align-items: center;
   height: 100%;
   width: 100%;
   top: 0;
@@ -361,9 +387,9 @@
 }
 .buttom-1 {
   width: 256px;
-  position: relative;
+  position:relative;
   height: 77px;
-  text-align: left;
+  text-align: center;
   font-size: 25px;
 }
 .shape-your-body-parent {
@@ -475,10 +501,10 @@
 }
 .image-2-icon,
 .image-3-icon {
-  top: 234px;
+  top: 220px;
   left: 1456px;
   width: 323px;
-  height: 584px;
+  height: 684px;
 }
 .image-3-icon {
   top: 1411px;

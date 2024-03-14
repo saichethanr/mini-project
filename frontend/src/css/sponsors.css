@@ -1,0 +1,38 @@
+    .card-carousel-container {
+      overflow: hidden; /* Hide overflow content */
+      width: 100%; /* Full width */
+      height: 11rem; /* Fixed height */
+    }
+
+    .card-carousel-wrapper {
+      display: flex; /* Make the container a flex container */
+      animation: marquee 20s linear infinite; /* Add the marquee animation */
+      padding-right: 10px; /* Adjust spacing between cards */
+    }
+
+    .card {
+      flex: 0 0 auto; /* Do not grow, do not shrink, set to auto width */
+      margin-right: 10px; /* Adjust spacing between cards */
+      border: 1px solid #ccc; /* Add border for each card */
+      border-radius: 40px;
+    }
+
+    .card img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 40px;  /* Ensure the image fits within the card */
+    }
+
+    .card-content {
+      padding: 0px;
+      /* Add padding to the card content */
+    }
+
+    @keyframes marquee {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-75% - 10px)); /* Translate the container by -100% (full width) minus the margin */
+      }
+    }

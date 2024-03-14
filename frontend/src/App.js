@@ -1,5 +1,5 @@
 import React from 'react';
-// import VideoComponent from './components/VideoComponent';
+import VideoComponent from './components/VideoComponent';
 import Destop from './components/destop';
 import './css/App.css';
 function App() {

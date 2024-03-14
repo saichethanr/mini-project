@@ -1,11 +1,13 @@
 import FrameComponent2 from "./frame-component2";
 import FrameComponent1 from "./frame-component1";
 import FrameComponent from "./frame-component";
-
+import Card from "./card";
 import "../css/destop.css";
 import leftMainImage from "../img/leftmain.png";
 import RightMainImage from "../img/rightmain.png";
 import BottomImage from "../img/bottom.png"
+import CardCarousel from "./sponsors";
+import cardData from './carddata';  
 const Destop = () => {
   return (
     <div className="destop">
@@ -36,24 +38,7 @@ const Destop = () => {
           <b className="get-strated">Learn More</b>
         </div>
       </div>
-      <div className="frame-div">
-        <div className="frame-parent">
-          <div className="vector-parent">
-            <img className="vector-icon" alt="" src="/vector.svg" />
-            <div className="strength-training">Strength Training</div>
-            <div className="lorem-ipsum-is1">{`Lorem Ipsum is simply dummy text of the printing and typesetting industry. `}</div>
-            <div className="join-now">Join Now</div>
-            <img className="frame-item" alt="" src="/group-3.svg" />
-          </div>
-          <div className="vector-parent">
-            <img className="group-icon" alt="" src="/group.svg" />
-            <div className="strength-training">Cardio Training</div>
-            <div className="lorem-ipsum-is1">{`Lorem Ipsum is simply dummy text of the printing and typesetting industry. `}</div>
-            <div className="join-now">Join Now</div>
-            <img className="frame-item" alt="" src="/group-3.svg" />
-          </div>
-        </div>
-      </div>
+       <Card/>
       <div className="line-div" />
       <FrameComponent1 />
       <div className="destop-inner1">
@@ -89,11 +74,8 @@ const Destop = () => {
           <p className="start-your">SHAPE YOUR</p>
           <p className="body">BODY</p>
         </div>
-        <div className="lorem-ipsum-is5">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s,
-        </div>
+        <CardCarousel cardData={cardData} />
+
         <div className="buttom-1">
           <div className="buttom-1-child" />
           <b className="learn-more1">Learn More</b>

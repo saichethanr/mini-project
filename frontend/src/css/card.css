@@ -1,0 +1,49 @@
+.frame-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 9rem;
+  }
+  
+  .frame-parent {
+    display: flex;
+    flex-wrap: wrap; /* Allow cards to wrap to the next line if needed */
+    justify-content: center; /* Center the cards horizontally */
+  }
+  
+  .vector-parent {
+    background-color: royalblue;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px; /* Increase width of the cards */
+    min-height: 300px; /* Ensure minimum height for consistent appearance */
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+  .vector-parent:hover {
+    transform: scale(1.05); /* Scale up the card on hover */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+  }
+  
+  .vector-icon,
+  .group-icon {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .lorem-ipsum-is1 {
+    margin-top: 10px;
+  }
+  
+  .join-now {
+    margin-top: 20px;
+    background-color: white;
+    color: royalblue;
+    padding: 8px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+  }
+  
