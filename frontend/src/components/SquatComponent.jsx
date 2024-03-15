@@ -2,13 +2,13 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import '../css/App.css'
 
-function VideoStream1() {
+function VideoStream2() {
   const [counter, setCounter] = useState(0);
 
   useEffect(() => {
     const fetchCounter = async () => {
       try {
-        const response = await axios.get('http://127.0.0.1:5000/count_RHR');
+        const response = await axios.get('http://127.0.0.1:5000/count_SQUAT');
         setCounter(response.data);
       } catch (error) {
         console.error('Error fetching counter:', error);
@@ -27,7 +27,7 @@ function VideoStream1() {
           className='video'
           height={480}
           width={640}
-          src={'http://127.0.0.1:5000/video_RHR'}
+          src={'http://127.0.0.1:5000/video_SQUAT'}
           allowFullScreen
         ></iframe>
       </div>
@@ -38,4 +38,4 @@ function VideoStream1() {
   );
 }
 
-export default VideoStream1;
+export default VideoStream2;
