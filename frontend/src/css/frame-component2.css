@@ -1,107 +1,60 @@
-.gymeye {
-  position: relative;
-}
-.home-parent {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 0 90px;
-  font-size: 27px;
-}
-.gymeye-parent,
-.login-wrapper {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-.login-wrapper {
-  width: 169px;
-  border: 2px solid #fff;
-  box-sizing: border-box;
-  height: 51px;
-  padding: 12px 46px;
-  font-size: 32px;
-}
-.gymeye-parent {
-  position: absolute;
-  top: 0;
-  left: 174px;
-  backdrop-filter: blur(4px);
-  padding: 30px 3px;
-  gap: 0 379px;
-  text-align: center;
-  font-size: 33px;
-  color: #fff;
-  font-family: Inter;
-}
-/* Navbar styling */
+/* frame-component2.css */
+
 .navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #333; /* Example background color */
-  color: #fff; /* Example text color */
-  padding: 10px 20px;
+  background-color: black; /* Black background color */
+  padding: 15px 20px; /* Padding for the navbar */
+  display: flex; /* Flex layout for better alignment */
+  justify-content: space-between; /* Space between items */
+  align-items: center; /* Align items vertically */
+  z-index: 10;
 }
 
-/* Brand styling */
+.navbar-brand {
+  font-size: 1.8rem; /* Larger font size for the brand */
+  font-weight: bold; /* Bold font weight */
+  color: #ffffff; /* White text color */
+}
+
 .brand-text {
-  font-weight: bold;
+  color: #ffffff; /* White text color */
 }
 
-/* Navbar styling */
-.navbar {
-  position: relative; /* Ensure proper stacking context */
-  z-index: 1000; /* Increase z-index to ensure it overlaps other elements */
-  background-color: #000; /* Black background */
-  color: #fff; /* White text */
-  padding: 15px 20px; /* Increased padding for height */
-  height: 60px; /* Increased height */
-}
-
-/* Navbar links styling */
 .navbar-links ul {
-  list-style-type: none;
+  list-style: none; /* Remove default list styles */
   margin: 0;
   padding: 0;
-  text-align: center;
 }
 
 .navbar-links ul li {
-  display: inline-block;
-  margin-right: 100px; /* Spacing between links */
-}
-
-.navbar-links ul li:last-child {
-  margin-right: 0;
+  display: inline-block; /* Display links horizontally */
+  margin-right: 7rem; /* Margin between links */
 }
 
 .nav-link {
-  color: #fff; /* White link color */
-  text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s; /* Smooth transition for hover effect */
+  color: #ffffff; /* White text color */
+  text-decoration: none; /* Remove underline */
+  font-size: 1.8rem; /* Larger font size for navbar links */
+  transition: color 0.3s, padding 0.3s; /* Smooth transition for color and padding change */
 }
 
 .nav-link:hover {
-  text-decoration: underline;
-  color: rgb(72, 0, 255); /* Yellow link color on hover (example) */
+  color: #3023e4; /* Lighter text color on hover */
+  padding: 20px; /* Add padding on hover */
 }
 
-/* Login styling */
-.login-text {
-  font-weight: bold;
+.nav-link:active {
+  z-index: 10;
+  background-color: rgba(36, 36, 219, 0.5); /* Background color on click */
+}
+
+.navbar-login .login-text {
+  color: #ffffff; /* White text color */
+  font-size: 1.4rem; /* Larger font size for login text */
   cursor: pointer;
-  transition: color 0.3s, background-color 0.3s; /* Smooth transition for hover effect */
-  margin-left: 50px; /* Adjust position */
-  padding: 20px 10px;
-  border: none;
-  background-color: #000; /* Initial background color */
+  padding: 20px;
+  background-color: rgb(65, 65, 201); /* Show pointer cursor on hover */
 }
 
-.login-text:hover {
-  color: #fff; /* White color on hover */
-  background-color: rgb(13, 0, 255); /* Blue background on hover */
+.navbar-login .login-text:hover {
+  text-decoration: underline; /* Underline on hover */
 }

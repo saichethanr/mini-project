@@ -9,7 +9,7 @@ const FrameComponent2 = () => {
     <div class="navbar-links">
       <ul>
         <li><a href="#" class="nav-link">Home</a></li>
-        <li><a href="#" class="nav-link">Product</a></li>
+        <li><a href="#" class="nav-link">Plans</a></li>
         <li><a href="#" class="nav-link">Contact</a></li>
       </ul>
     </div>

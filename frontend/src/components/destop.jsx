@@ -11,11 +11,11 @@ import cardData from './carddata';
 const Destop = () => {
   return (
     <div className="destop">
+        <FrameComponent2 />
       <div className="destop-child" />
       <div className="destop-item" />
       <div className="destop-inner" />
       <div className="rectangle-div" />
-      <FrameComponent2 />
       <div className="start-your-training-with-us-parent">
         <div className="start-your-training-container">
           <p className="start-your">START YOUR</p>

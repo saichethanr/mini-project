@@ -6,7 +6,7 @@ const FrameComponent1 = () => {
       <div className="program-strenght-training-card-parent">
         <div className="program-strenght-training-container">
           <p className="program">
-            <b>Program</b>
+            <b>OUR PLANS</b>
           </p>
           <p className="strenght-training">Strenght Training</p>
           <p className="strenght-training">Cardio Training</p>
