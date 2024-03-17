@@ -52,7 +52,8 @@
   font-size: 1.4rem; /* Larger font size for login text */
   cursor: pointer;
   padding: 20px;
-  background-color: rgb(65, 65, 201); /* Show pointer cursor on hover */
+  margin: 10px;
+  background-color:  #3023e4; /* Show pointer cursor on hover */
 }
 
 .navbar-login .login-text:hover {

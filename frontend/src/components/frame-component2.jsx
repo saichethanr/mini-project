@@ -15,6 +15,8 @@ const FrameComponent2 = () => {
     </div>
     <div class="navbar-login">
       <b class="login-text">Login</b>
+      <b class="login-text">SignUp</b>
+      
     </div>
   </nav>
   );
