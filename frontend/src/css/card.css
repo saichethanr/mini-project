@@ -2,29 +2,46 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 9rem;
+
+    margin-top: 10rem;
   }
-  
+  .starting-head{
+    display: flex;
+  }
+  .our{
+    color: white;
+    margin-right: 30px;
+    margin-bottom: 5rem;
+ font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  .plan{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #0065fd;
+  }
   .frame-parent {
     display: flex;
     flex-wrap: wrap; /* Allow cards to wrap to the next line if needed */
-    justify-content: center; /* Center the cards horizontally */
+    justify-content: center;
+    margin-left: 17rem; /* Center the cards horizontally */
   }
   
   .vector-parent {
-    background-color: royalblue;
+
     color: white;
     padding: 20px;
     margin: 10px;
+    z-index: 10;
     border-radius: 10px;
     text-align: center;
-    width: 350px; /* Increase width of the cards */
+    margin-bottom: 6rem;
+    max-width: 30rem; /* Increase width of the cards */
     min-height: 300px; /* Ensure minimum height for consistent appearance */
     transition: all 0.3s ease; /* Smooth transition for hover effect */
   }
   
   .vector-parent:hover {
-    transform: scale(1.05); /* Scale up the card on hover */
+    transform: scale(1.60); /* Scale up the card on hover */
+    z-index: 20;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
   }
   
@@ -40,10 +57,18 @@
   
   .join-now {
     margin-top: 20px;
-    background-color: white;
-    color: royalblue;
-    padding: 8px 20px;
+    background-color:  #0065fd;
+    color: white;
+    padding: 8px 30px;
     border-radius: 20px;
     cursor: pointer;
+    z-index: 10;
   }
+
+  .join-now:hover{
+    align-items: center;
+    transform: scale(1.05); 
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  }
+  
   

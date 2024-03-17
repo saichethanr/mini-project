@@ -29,8 +29,7 @@
   opacity: 0.3;
 }
 .destop-inner {
-  top: calc(50% - 4699.5px);
-  left: calc(50% - 974px);
+  margin-top: 30rem;
   background: radial-gradient(
     50% 50%at 50% 50%,
     rgba(0, 41, 255, 0.31),
@@ -38,6 +37,7 @@
   );
   width: 1920px;
   height: 1482px;
+  
 }
 .rectangle-div {
   position: absolute;
@@ -333,6 +333,7 @@
   width: 703px;
   position: relative;
   height: 518.9px;
+  margin-top: 25rem;
 }
 .destop-inner1 {
   position: absolute;
@@ -511,6 +512,7 @@
   left: 829px;
   width: 1076px;
   height: 844px;
+  margin-top: 11rem;
 }
 .destop {
   width: 100%;

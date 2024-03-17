@@ -1,5 +1,5 @@
 import "../css/frame-component1.css";
-
+// footer
 const FrameComponent1 = () => {
   return (
     <div className="destop-inner2">
