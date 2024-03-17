@@ -1,5 +1,6 @@
- .destop-child {
-  top: calc(50% + 709.5px);
+
+.destop-child {
+  top: calc(50%);
   left: calc(50% - 1404px);
   background: radial-gradient(
     50% 50%at 50% 50%,
@@ -151,7 +152,7 @@
   height: 22.9px;
 }
 .vector-parent {
-  width: 291.7px;
+  width: 26rem;
   background-color: rgba(46, 54, 60, 0.5);
   backdrop-filter: blur(22px);
   border: 0.9px solid rgba(255, 255, 255, 0.2);
@@ -159,10 +160,11 @@
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;
+  justify-content: center;
   padding: 32.40762710571289px;
   gap: 16px 17.91px;
+  margin-right: 3rem;
 }
 .group-icon {
   width: 52.7px;
@@ -182,13 +184,13 @@
   flex-shrink: 0;
 }
 .frame-parent {
-  width: 1409px;
-  height: 473px;
+  width: 1909px;
+  height: 1473px;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  gap: 0 81.87px;
+  align-items: center;
+  justify-content: left;
+  gap: 0 100px;
 }
 .frame-div,
 .line-div {
@@ -333,7 +335,7 @@
   width: 703px;
   position: relative;
   height: 518.9px;
-  margin-top: 25rem;
+  margin-top: 70rem;
 }
 .destop-inner1 {
   position: absolute;
@@ -512,7 +514,7 @@
   left: 829px;
   width: 1076px;
   height: 844px;
-  margin-top: 11rem;
+  margin-top: 30rem;
 }
 .destop {
   width: 100%;
