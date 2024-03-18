@@ -1,9 +1,9 @@
 // React Signup Form Component
 import React, { useState } from "react";
 import axios from "axios";
-import Navbar from '../Components/Navbar/Navbar';
 import {useNavigate} from 'react-router-dom';
-import './css/Signup.css';
+import '../css/SignUp.css';
+
 
 function SignUp() {
   // Initialize state variables for form data
@@ -48,7 +48,7 @@ function SignUp() {
   // Render signup form
   return (
     <div>
-      <Navbar/>
+   
     <div className="signup">
         <div className="signup-container">
       <h1>Signup</h1>

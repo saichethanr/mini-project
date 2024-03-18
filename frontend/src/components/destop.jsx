@@ -9,6 +9,8 @@ import BottomImage from "../img/bottom.png"
 import CardCarousel from "./sponsors";
 import cardData from './carddata'; 
 
+
+
 const Destop = () => {
   return (
     <div className="destop">

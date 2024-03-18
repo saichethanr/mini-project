@@ -1,6 +1,19 @@
 import "../css/frame-component2.css";
+import {Link} from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 
 const FrameComponent2 = () => {
+ 
+  const navigate=useNavigate();
+  
+  const handleSignup = (e) => {
+    navigate(`/signup`);
+  };
+
+  const handleLogin = (e) => {
+    navigate(`/login`);
+  };  
+
   return (
     <nav class="navbar">
     <div class="navbar-brand">
@@ -14,8 +27,8 @@ const FrameComponent2 = () => {
       </ul>
     </div>
     <div class="navbar-login">
-      <b class="login-text">Login</b>
-      <b class="login-text">SignUp</b>
+    <Link  to='/login'><button className="login-text"  onClick={handleLogin}>Login</button></Link>
+    <Link to='/signup'><button  className="login-text"  onClick={handleSignup}>Sign up</button></Link>
       
     </div>
   </nav>

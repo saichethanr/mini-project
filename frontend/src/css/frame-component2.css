@@ -50,11 +50,12 @@
 }
 
 .navbar-login .login-text {
-  color: #ffffff; /* White text color */
-  font-size: 1.4rem; /* Larger font size for login text */
+  color: #0026ff; /* White text color */
+  font-size: 1.3rem; /* Larger font size for login text */
   cursor: pointer;
   padding: 20px;
   margin: 10px;
+  
   transition: color 0.3s, padding 0.3s;
  /* Show pointer cursor on hover */
 }

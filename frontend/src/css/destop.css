@@ -1,5 +1,6 @@
 
   .destop-child {
+    z-index: 20;
     top: calc(50%);
     left: calc(50% - 1404px);
     background: radial-gradient(
@@ -37,7 +38,7 @@
       #252525
     );
     width: 1920px;
-    height: 1482px;
+    height: 1982px;
     
   }
   .rectangle-div {
