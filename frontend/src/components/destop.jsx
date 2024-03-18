@@ -1,6 +1,5 @@
 import FrameComponent2 from "./frame-component2";
 import FrameComponent1 from "./frame-component1";
-import FrameComponent from "./frame-component";
 import Card from "./card";
 import "../css/destop.css";
 import bpt from "../img/wcheck.jpg"
