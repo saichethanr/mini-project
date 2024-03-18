@@ -8,13 +8,7 @@ import SignUp from './pages/SignUp';
 import Login from "./pages/Login"
 function App() {
   return (
-    // <div className="App">
-    //   {/* <h1>REP COUNTER</h1>
-    //   <VideoStream1/> */}
-    // <Destop/>
-    // </div>
     <>
-    
     <BrowserRouter>
     <Routes>
       <Route path="/" element={<Destop/>}></Route>

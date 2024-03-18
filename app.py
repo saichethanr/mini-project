@@ -1,16 +1,24 @@
 import cv2
 import mediapipe as mp
 import base64
+from sqlalchemy import text
 import threading
-from flask import Flask, render_template,Response
+from flask import Flask,Response,request,jsonify
 from flask_socketio import SocketIO
 from flask_cors import CORS,cross_origin
 import numpy as np
+from flask_sqlalchemy import SQLAlchemy
 from math import acos, degrees
 
 app = Flask(__name__)
 CORS(app)
 socketio = SocketIO(app, cors_allowed_origins="*")
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://sai:1445@127.0.0.1:5432/Gym'
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAlchemy(app)
+
 counter_RHR = 0
 counter_SQUAT = 0
 
@@ -138,6 +146,31 @@ def video_SQUAT():
 def get_count_SQUAT():
     global counter_SQUAT
     return str(counter_SQUAT)
+
+
+
+#handling the post requests
+@app.route('/signup', methods=['POST'])
+def signup():
+    data = request.json
+    name = data.get('firstname')
+    email = data.get('email')
+    password = data.get('password')
+    
+    try:
+        db.session.execute(
+            text("INSERT INTO users (name, email, password) VALUES (:name, :email, :password)"),
+            {"name": name, "email": email, "password": password}
+        )
+        db.session.commit()
+        return jsonify(message="User successfully registered")
+    
+    except Exception as e:
+        db.session.rollback()
+        print(e)
+        return jsonify(error=str(e)), 500
+    
+    
 
 if __name__ == '__main__':
     app.run(debug=True)

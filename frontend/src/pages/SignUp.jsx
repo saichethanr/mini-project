@@ -36,12 +36,12 @@ function SignUp() {
       });
       // Display success message
       setMessage(response.data);
-      if(response.data==="User successfully registered"){
+      if(response.data.message==="User successfully registered"){
         navigate("/login");
     }
     } catch (error) {
       // Display error message
-      setMessage(error.response.data);
+      setMessage(error.response.data.error);
     }
   };
 
