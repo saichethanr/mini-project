@@ -8,6 +8,10 @@
   .starting-head{
     display: flex;
   }
+  .strength-training{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: large;
+  }
   .our{
     color: white;
     margin-right: 30px;
@@ -38,7 +42,7 @@
   }
   
   .vector-parent:hover {
-    transform: scale(1.60); /* Scale up the card on hover */
+    transform: scale(1.40); /* Scale up the card on hover */
     z-index: 20;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
   }

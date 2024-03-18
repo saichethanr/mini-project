@@ -7,7 +7,8 @@ import leftMainImage from "../img/leftmain.png";
 import RightMainImage from "../img/rightmain.png";
 import BottomImage from "../img/bottom.png"
 import CardCarousel from "./sponsors";
-import cardData from './carddata';  
+import cardData from './carddata'; 
+
 const Destop = () => {
   return (
     <div className="destop">
@@ -83,12 +84,11 @@ const Destop = () => {
           <b className="learn-more1">Learn More</b>
         </div>
       </div>
-    
       <div className="ellipse-div" />
       <img className="image-1-icon" alt="" src={leftMainImage} />
       <img className="image-2-icon" alt="" src={RightMainImage} />
       <img className="image-3-icon" alt="" src={BottomImage} />
-   
+
     </div>
   );
 };

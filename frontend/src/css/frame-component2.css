@@ -1,12 +1,14 @@
 /* frame-component2.css */
 
 .navbar {
-  background-color: black; /* Black background color */
+  background-color: rgba(46, 54, 60, 0);; /* Black background color */
   padding: 15px 20px; /* Padding for the navbar */
   display: flex; /* Flex layout for better alignment */
   justify-content: space-between; /* Space between items */
   align-items: center; /* Align items vertically */
-  z-index: 10;
+  z-index: 30;
+  width: 198vh;
+  position: fixed;
 }
 
 .navbar-brand {
@@ -38,13 +40,13 @@
 }
 
 .nav-link:hover {
-  color: #3023e4; /* Lighter text color on hover */
+  color: #ffffff; /* Lighter text color on hover */
   padding: 20px; /* Add padding on hover */
 }
 
 .nav-link:active {
   z-index: 10;
-  background-color: rgba(36, 36, 219, 0.5); /* Background color on click */
+  background-color: #f80303; /* Background color on click */
 }
 
 .navbar-login .login-text {
@@ -53,9 +55,11 @@
   cursor: pointer;
   padding: 20px;
   margin: 10px;
-  background-color:  #3023e4; /* Show pointer cursor on hover */
+  transition: color 0.3s, padding 0.3s;
+ /* Show pointer cursor on hover */
 }
 
 .navbar-login .login-text:hover {
-  text-decoration: underline; /* Underline on hover */
+  background-color:  #f80303;
+ /* Underline on hover */
 }

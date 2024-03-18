@@ -12,8 +12,7 @@ const Card = () => {
       <div className="frame-parent">
 
         <div className="vector-parent">
-          <img className="vector-icon" alt="" src={dumb} />
-          <div className="strength-training">30 DAY PLAN</div>
+          <h2>30 DAY PLAN</h2>
           <div className="lorem-ipsum-is1">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.
@@ -24,8 +23,8 @@ const Card = () => {
 
 
         <div className="vector-parent">
-          <img className="group-icon" alt="" src="/group.svg" />
-          <div className="strength-training">60 DAY PLAN</div>
+        <h2>60 DAY PLAN</h2>
+         
           <div className="lorem-ipsum-is1">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.
@@ -34,8 +33,7 @@ const Card = () => {
         </div>
 
         <div className="vector-parent">
-          <img className="group-icon" alt="" src="/group.svg" />
-          <div className="strength-training">90 DAY PLAN</div>
+        <h2>90 DAY PLAN</h2>
           <div className="lorem-ipsum-is1">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry.
