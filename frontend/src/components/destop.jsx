@@ -71,7 +71,7 @@ const Destop = () => {
           </div>
         </div>
       </div>
-      <FrameComponent1 />
+ 
       <div className="shape-your-body-parent">
         <div className="shape-your-body-container">
           <p className="start-your">SHAPE YOUR</p>
@@ -89,6 +89,7 @@ const Destop = () => {
       <img className="image-1-icon" alt="" src={leftMainImage} />
       <img className="image-2-icon" alt="" src={RightMainImage} />
       <img className="image-3-icon" alt="" src={BottomImage} />
+   
     </div>
   );
 };

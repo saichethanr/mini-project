@@ -1,541 +1,541 @@
 
-.destop-child {
-  top: calc(50%);
-  left: calc(50% - 1404px);
-  background: radial-gradient(
-    50% 50%at 50% 50%,
-    rgba(5, 0, 255, 0.71),
-    rgba(5, 0, 255, 0)
-  );
-  width: 2634px;
-  height: 1988px;
-  opacity: 0.3;
-}
-.destop-child,
-.destop-inner,
-.destop-item {
-  position: absolute;
-  border-radius: 50%;
-}
-.destop-item {
-  top: calc(50% + 2520.5px);
-  left: calc(50% - 1404px);
-  background: radial-gradient(
-    50% 50%at 50% 50%,
-    rgba(5, 0, 255, 0.71),
-    rgba(5, 0, 255, 0)
-  );
-  width: 2634px;
-  height: 1988px;
-  opacity: 0.3;
-}
-.destop-inner {
-  margin-top: 30rem;
-  background: radial-gradient(
-    50% 50%at 50% 50%,
-    rgba(0, 41, 255, 0.31),
-    #252525
-  );
-  width: 1920px;
-  height: 1482px;
+  .destop-child {
+    top: calc(50%);
+    left: calc(50% - 1404px);
+    background: radial-gradient(
+      50% 50%at 50% 50%,
+      rgba(5, 0, 255, 0.71),
+      rgba(5, 0, 255, 0)
+    );
+    width: 2634px;
+    height: 1988px;
+    opacity: 0.3;
+  }
+  .destop-child,
+  .destop-inner,
+  .destop-item {
+    position: absolute;
+    border-radius: 50%;
+  }
+  .destop-item {
+    top: calc(50% + 2520.5px);
+    left: calc(50% - 1404px);
+    background: radial-gradient(
+      50% 50%at 50% 50%,
+      rgba(5, 0, 255, 0.71),
+      rgba(5, 0, 255, 0)
+    );
+    width: 2634px;
+    height: 1988px;
+    opacity: 0.3;
+  }
+  .destop-inner {
+    margin-top: 30rem;
+    background: radial-gradient(
+      50% 50%at 50% 50%,
+      rgba(0, 41, 255, 0.31),
+      #252525
+    );
+    width: 1920px;
+    height: 1482px;
+    
+  }
+  .rectangle-div {
+    position: absolute;
+    top: 2158px;
+    left: 871px;
+    width: 871px;
+    height: 1080px;
+    transform: rotate(180deg);
+    transform-origin: 0 0;
+  }
+  .start-your {
+    margin: 0;
+  }
+  .span {
+    color: #ff8a00;
+  }
+  .with-us {
+    color: #fff;
+  }
+  .training-with-us {
+    margin: 0;
+    color: #0038fd;
+  }
+  .lorem-ipsum-is,
+  .start-your-training-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 83px;
+    line-height: 107px;
+    display: inline-block;
+    width: 648px;
+  }
+  .lorem-ipsum-is {
+    top: 357px;
+    font-size: 28px;
+    line-height: 42px;
+    color: #b3b3b3;
+    text-align: justify;
+    height: 159px;
+  }
+  .get-strated {
+    position: absolute;
+    top: 22px;
+    left: 55px;
+    line-height: 49px;
+  }
+  .get-strated-wrapper {
+    top: 567px;
+    left: 2px;
+    background-color: #0038fd;
+    font-family: Inter;
+  }
+  .frame-child,
+  .get-strated-wrapper,
+  .rectangle-parent {
+    position: absolute;
+    width: 259px;
+    height: 93px;
+  }
+  .frame-child {
+    top: 0;
+    left: 0;
+    border: 3px solid #3f5cf4;
+    box-sizing: border-box;
+  }
+  .rectangle-parent {
+    top: 567px;
+    left: 324px;
+    color: #0038fd;
+    font-family: Inter;
+  }
+  .start-your-training-with-us-parent {
+    position: absolute;
+    top: 276px;
+    left: 133px;
+    width: 648px;
+    height: 660px;
+    display: none;
+    font-family: Aboreto;
+  }
+  .vector-icon {
+    width: 57px;
+    position: relative;
+    height: 56px;
+  }
+  .lorem-ipsum-is1,
+  .strength-training {
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .strength-training {
+    width: 190.2px;
+    color: #fff;
+    height: 22.2px;
+  }
+  .lorem-ipsum-is1 {
+    width: 226px;
+    font-size: 17.1px;
+    line-height: 24.73px;
+    height: 101.5px;
+  }
+  .join-now {
+    position: relative;
+    font-size: 16.2px;
+  }
+  .frame-item {
+    width: 31.6px;
+    position: relative;
+    height: 22.9px;
+  }
+  .vector-parent {
+    width: 26rem;
+    background-color: rgba(46, 54, 60, 0.5);
+    backdrop-filter: blur(22px);
+    border: 0.9px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 32.40762710571289px;
+    gap: 16px 17.91px;
+    margin-right: 3rem;
+  }
+  .group-icon {
+    width: 52.7px;
+    position: relative;
+    height: 55.4px;
+  }
+  .group-icon1,
+  .layer-1-icon {
+    width: 55.5px;
+    position: relative;
+    height: 50px;
+  }
+  .layer-1-icon {
+    width: 44.7px;
+    height: 50.4px;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .frame-parent {
+    width: 1909px;
+    height: 1473px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left;
+    gap: 0 100px;
+  }
+  .frame-div,
+  .line-div {
+    position: absolute;
+    box-sizing: border-box;
+    align-items: center;
+  }
+  .frame-div {
+    top: 1020px;
+    left: calc(50% - 946px);
+    width: 1891px;
+    height: 391px;
+    padding-top: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 20.5px;
+    color: #c9c9c9;
+    font-family: Aboreto;
+  }
+  .line-div {
+    top: 2270px;
+    left: 219px;
+    border-top: 2px solid #fff;
+    width: 1482px;
+    height: 2px;
+  }
+  .have-a-personal,
+  .rggr {
+    position: absolute;
+    display: inline-block;
+  }
+  .rggr {
+    top: 0;
+    left: 0;
+    font-size: 70px;
+    line-height: 107px;
+    font-weight: 900;
+    width: 644px;
+  }
+  .have-a-personal {
+    top: 3px;
+    left: calc(50% - 222.55px);
+    line-height: 37.41px;
+    text-transform: uppercase;
+    width: 507px;
+    height: 36px;
+  }
+
+  .buttom-1 {
+    position: absolute;
+    top: 5%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+  }
+
+  /* Style the button */
+  .buttom-1 button {
+    background-color: #0065fd;
+    color: white;
+    padding: 20px 70px; /* Adjust padding for larger button */
+    border: none;
+    border-radius: 10px; /* Adjust border radius for rounded corners */
+    font-size: 24px; /* Adjust font size */
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out; /* Apply hover effect */
+  }
+
+  /* Apply hover effect */
+  .buttom-1 button:hover {
+    transform: scale(1.05);
+  }
+
+  .frame-child3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 51.2px;
+    height: 42.9px;
+    object-fit: cover;
+  }
+  .have-a-personal-trainer-parent {
+    position: absolute;
+    top: 260px;
+    left: 3.1px;
+    width: 568.9px;
+    height: 42.9px;
+  }
+  .free-personal-trainer {
+    position: absolute;
+    top: 3px;
+    left: calc(50% - 288.05px);
+    line-height: 37.41px;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 638px;
+    height: 36px;
+  }
+  .free-personal-trainer-for-new-parent {
+    position: absolute;
+    top: 332px;
+    left: 3.1px;
+    width: 699.9px;
+    height: 42.9px;
+  }
+  .free-supplements-for {
+    position: absolute;
+    top: 3px;
+    left: calc(50% - 284.05px);
+    line-height: 37.41px;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 630px;
+    height: 36px;
+  }
+  .free-supplements-for-every-new-parent {
+    position: absolute;
+    top: 404px;
+    left: 3.1px;
+    width: 691.9px;
+    height: 42.9px;
+  }
+  .open-24-hours {
+    position: absolute;
+    top: 3px;
+    left: calc(50% - 143.05px);
+    line-height: 37.41px;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 348px;
+    height: 36px;
+  }
+  .open-24-hours-parent {
+    position: absolute;
+    top: 476px;
+    left: 3.1px;
+    width: 409.9px;
+    height: 42.9px;
+  }
+  .rggr-parent {
+    width: 703px;
+    position: relative;
+    height: 518.9px;
+    margin-top: 70rem;
+  }
+  .destop-inner1 {
+    position: absolute;
+    top: 1515px;
+    left: 185px;
+    width: 599px;
+    height: 606px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    font-size: 23px;
+  }
+  .body {
+    margin: 0;
+    color: #0065fd;
+  }
+  .lorem-ipsum-is5,
+  .shape-your-body-container {
+    position: relative;
+    display: inline-block;
+    flex-shrink: 0;
+  }
+  .shape-your-body-container {
+    width: 616px;
+    line-height: 90px;
+    font-weight: 900;
+    height: 191px;
+  }
+  .lorem-ipsum-is5 {
+    width: 648px;
+    font-size: 26px;
+    line-height: 42px;
+    text-align: justify;
+  }
+  .buttom-1-child {
+    position:relative;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #0065fd;
+  }
+  .learn-more1 {
+    position: absolute;
+    top: 23.64%;
+    left: 21.25%;
+    line-height: 49px;
+  }
+  .buttom-1 {
+    width: 256px;
+    position:relative;
+    height: 77px;
+    text-align: center;
+    font-size: 25px;
+  }
+  .shape-your-body-parent {
+    position: absolute;
+    top: 247px;
+    left: 646px;
+    width: 659px;
+    height: 589px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 65px 54px;
+    text-align: center;
+    font-size: 70px;
+  }
+  .strength-training1 {
+    margin-block-start: 0;
+    margin-block-end: 7px;
+  }
+  .strength-training-power-container {
+    width: 244px;
+    position: relative;
+    font-weight: 800;
+    display: inline-block;
+    height: 66px;
+    flex-shrink: 0;
+  }
+  .lorem-ipsum-is6 {
+    width: 408px;
+    position: relative;
+    font-size: 17.1px;
+    line-height: 24.73px;
+    color: #c9c9c9;
+    display: inline-block;
+    height: 60px;
+    flex-shrink: 0;
+  }
+  .learn-more2 {
+    position: absolute;
+    top: 23.58%;
+    left: 21.24%;
+    line-height: 25.92px;
+  }
+  .buttom-3 {
+    width: 137px;
+    position: relative;
+    height: 49.2px;
+    font-size: 13.2px;
+  }
+  .strength-training-power-lifter-parent {
+    position: absolute;
+    top: -0.5px;
+    left: -0.5px;
+    background-color: rgba(46, 54, 60, 0.5);
+    backdrop-filter: blur(23.42px);
+    border: 0.9px solid rgba(255, 255, 255, 0.2);
+    box-sizing: border-box;
+    width: 660.5px;
+    height: 277.7px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 39px 40px;
+    gap: 13px 0;
+  }
+  .instance-parent {
+    position: absolute;
+    top: 2421px;
+    left: 250px;
+    width: 1411px;
+    height: 607px;
+    font-size: 27.5px;
+  }
+
+  .ellipse-div {
+    position: absolute;
+    top: calc(50% - 2687.5px);
+    left: calc(50% - 1328px);
+    border-radius: 50%;
+    background: radial-gradient(
+      ellipse at 70% 10%,
+      rgba(92, 71, 220, 0.5),
+      transparent
+    );
+    width: 2634px;
+    height: 1850px;
+
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+    transition: transform 0.3s ease-in-out;
+  }
   
-}
-.rectangle-div {
-  position: absolute;
-  top: 2158px;
-  left: 871px;
-  width: 871px;
-  height: 1080px;
-  transform: rotate(180deg);
-  transform-origin: 0 0;
-}
-.start-your {
-  margin: 0;
-}
-.span {
-  color: #ff8a00;
-}
-.with-us {
-  color: #fff;
-}
-.training-with-us {
-  margin: 0;
-  color: #0038fd;
-}
-.lorem-ipsum-is,
-.start-your-training-container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 83px;
-  line-height: 107px;
-  display: inline-block;
-  width: 648px;
-}
-.lorem-ipsum-is {
-  top: 357px;
-  font-size: 28px;
-  line-height: 42px;
-  color: #b3b3b3;
-  text-align: justify;
-  height: 159px;
-}
-.get-strated {
-  position: absolute;
-  top: 22px;
-  left: 55px;
-  line-height: 49px;
-}
-.get-strated-wrapper {
-  top: 567px;
-  left: 2px;
-  background-color: #0038fd;
-  font-family: Inter;
-}
-.frame-child,
-.get-strated-wrapper,
-.rectangle-parent {
-  position: absolute;
-  width: 259px;
-  height: 93px;
-}
-.frame-child {
-  top: 0;
-  left: 0;
-  border: 3px solid #3f5cf4;
-  box-sizing: border-box;
-}
-.rectangle-parent {
-  top: 567px;
-  left: 324px;
-  color: #0038fd;
-  font-family: Inter;
-}
-.start-your-training-with-us-parent {
-  position: absolute;
-  top: 276px;
-  left: 133px;
-  width: 648px;
-  height: 660px;
-  display: none;
-  font-family: Aboreto;
-}
-.vector-icon {
-  width: 57px;
-  position: relative;
-  height: 56px;
-}
-.lorem-ipsum-is1,
-.strength-training {
-  position: relative;
-  display: inline-block;
-  flex-shrink: 0;
-}
-.strength-training {
-  width: 190.2px;
-  color: #fff;
-  height: 22.2px;
-}
-.lorem-ipsum-is1 {
-  width: 226px;
-  font-size: 17.1px;
-  line-height: 24.73px;
-  height: 101.5px;
-}
-.join-now {
-  position: relative;
-  font-size: 16.2px;
-}
-.frame-item {
-  width: 31.6px;
-  position: relative;
-  height: 22.9px;
-}
-.vector-parent {
-  width: 26rem;
-  background-color: rgba(46, 54, 60, 0.5);
-  backdrop-filter: blur(22px);
-  border: 0.9px solid rgba(255, 255, 255, 0.2);
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  padding: 32.40762710571289px;
-  gap: 16px 17.91px;
-  margin-right: 3rem;
-}
-.group-icon {
-  width: 52.7px;
-  position: relative;
-  height: 55.4px;
-}
-.group-icon1,
-.layer-1-icon {
-  width: 55.5px;
-  position: relative;
-  height: 50px;
-}
-.layer-1-icon {
-  width: 44.7px;
-  height: 50.4px;
-  overflow: hidden;
-  flex-shrink: 0;
-}
-.frame-parent {
-  width: 1909px;
-  height: 1473px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: left;
-  gap: 0 100px;
-}
-.frame-div,
-.line-div {
-  position: absolute;
-  box-sizing: border-box;
-  align-items: center;
-}
-.frame-div {
-  top: 1020px;
-  left: calc(50% - 946px);
-  width: 1891px;
-  height: 391px;
-  padding-top: 75px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: 20.5px;
-  color: #c9c9c9;
-  font-family: Aboreto;
-}
-.line-div {
-  top: 2270px;
-  left: 219px;
-  border-top: 2px solid #fff;
-  width: 1482px;
-  height: 2px;
-}
-.have-a-personal,
-.rggr {
-  position: absolute;
-  display: inline-block;
-}
-.rggr {
-  top: 0;
-  left: 0;
-  font-size: 70px;
-  line-height: 107px;
-  font-weight: 900;
-  width: 644px;
-}
-.have-a-personal {
-  top: 3px;
-  left: calc(50% - 222.55px);
-  line-height: 37.41px;
-  text-transform: uppercase;
-  width: 507px;
-  height: 36px;
-}
+  .ellipse-div:hover {
+  
+    transform: scale(1);
+  }
+  .image-1-icon,
+  .image-2-icon,
+  .image-3-icon {
+    position: absolute;
+    top: 216px;
+    left: 114px;
+    width: 408px;
+    height: 620px;
+    object-fit: cover;
+  }
+  .image-2-icon,
+  .image-3-icon {
+    top: 220px;
+    left: 1456px;
+    width: 323px;
+    height: 684px;
+  }
+  .image-3-icon {
+    top: 1411px;
+    left: 829px;
+    width: 1076px;
+    height: 844px;
+    margin-top: 30rem;
+  }
+  .destop {
+    width: 100%;
+    position: relative;
+    background-color: #1d2429;
+    height: 3849px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 25px;
+    color: #fff;
+    font-family: Inter;
+  } 
 
-.buttom-1 {
-  position: absolute;
-  top: 5%;
-  left: 45%;
-  transform: translate(-50%, -50%);
-}
-
-/* Style the button */
-.buttom-1 button {
-  background-color: #0065fd;
-  color: white;
-  padding: 20px 70px; /* Adjust padding for larger button */
-  border: none;
-  border-radius: 10px; /* Adjust border radius for rounded corners */
-  font-size: 24px; /* Adjust font size */
-  cursor: pointer;
-  transition: transform 0.3s ease-in-out; /* Apply hover effect */
-}
-
-/* Apply hover effect */
-.buttom-1 button:hover {
-  transform: scale(1.05);
-}
-
-.frame-child3 {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 51.2px;
-  height: 42.9px;
-  object-fit: cover;
-}
-.have-a-personal-trainer-parent {
-  position: absolute;
-  top: 260px;
-  left: 3.1px;
-  width: 568.9px;
-  height: 42.9px;
-}
-.free-personal-trainer {
-  position: absolute;
-  top: 3px;
-  left: calc(50% - 288.05px);
-  line-height: 37.41px;
-  text-transform: uppercase;
-  display: inline-block;
-  width: 638px;
-  height: 36px;
-}
-.free-personal-trainer-for-new-parent {
-  position: absolute;
-  top: 332px;
-  left: 3.1px;
-  width: 699.9px;
-  height: 42.9px;
-}
-.free-supplements-for {
-  position: absolute;
-  top: 3px;
-  left: calc(50% - 284.05px);
-  line-height: 37.41px;
-  text-transform: uppercase;
-  display: inline-block;
-  width: 630px;
-  height: 36px;
-}
-.free-supplements-for-every-new-parent {
-  position: absolute;
-  top: 404px;
-  left: 3.1px;
-  width: 691.9px;
-  height: 42.9px;
-}
-.open-24-hours {
-  position: absolute;
-  top: 3px;
-  left: calc(50% - 143.05px);
-  line-height: 37.41px;
-  text-transform: uppercase;
-  display: inline-block;
-  width: 348px;
-  height: 36px;
-}
-.open-24-hours-parent {
-  position: absolute;
-  top: 476px;
-  left: 3.1px;
-  width: 409.9px;
-  height: 42.9px;
-}
-.rggr-parent {
-  width: 703px;
-  position: relative;
-  height: 518.9px;
-  margin-top: 70rem;
-}
-.destop-inner1 {
-  position: absolute;
-  top: 1515px;
-  left: 185px;
-  width: 599px;
-  height: 606px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: flex-start;
-  font-size: 23px;
-}
-.body {
-  margin: 0;
-  color: #0065fd;
-}
-.lorem-ipsum-is5,
-.shape-your-body-container {
-  position: relative;
-  display: inline-block;
-  flex-shrink: 0;
-}
-.shape-your-body-container {
-  width: 616px;
-  line-height: 90px;
-  font-weight: 900;
-  height: 191px;
-}
-.lorem-ipsum-is5 {
-  width: 648px;
-  font-size: 26px;
-  line-height: 42px;
-  text-align: justify;
-}
-.buttom-1-child {
-  position:relative;
-  align-items: center;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #0065fd;
-}
-.learn-more1 {
-  position: absolute;
-  top: 23.64%;
-  left: 21.25%;
-  line-height: 49px;
-}
-.buttom-1 {
-  width: 256px;
-  position:relative;
-  height: 77px;
-  text-align: center;
-  font-size: 25px;
-}
-.shape-your-body-parent {
-  position: absolute;
-  top: 247px;
-  left: 646px;
-  width: 659px;
-  height: 589px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  justify-content: flex-start;
-  gap: 65px 54px;
-  text-align: center;
-  font-size: 70px;
-}
-.strength-training1 {
-  margin-block-start: 0;
-  margin-block-end: 7px;
-}
-.strength-training-power-container {
-  width: 244px;
-  position: relative;
-  font-weight: 800;
-  display: inline-block;
-  height: 66px;
-  flex-shrink: 0;
-}
-.lorem-ipsum-is6 {
-  width: 408px;
-  position: relative;
-  font-size: 17.1px;
-  line-height: 24.73px;
-  color: #c9c9c9;
-  display: inline-block;
-  height: 60px;
-  flex-shrink: 0;
-}
-.learn-more2 {
-  position: absolute;
-  top: 23.58%;
-  left: 21.24%;
-  line-height: 25.92px;
-}
-.buttom-3 {
-  width: 137px;
-  position: relative;
-  height: 49.2px;
-  font-size: 13.2px;
-}
-.strength-training-power-lifter-parent {
-  position: absolute;
-  top: -0.5px;
-  left: -0.5px;
-  background-color: rgba(46, 54, 60, 0.5);
-  backdrop-filter: blur(23.42px);
-  border: 0.9px solid rgba(255, 255, 255, 0.2);
-  box-sizing: border-box;
-  width: 660.5px;
-  height: 277.7px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: 39px 40px;
-  gap: 13px 0;
-}
-.instance-parent {
-  position: absolute;
-  top: 2421px;
-  left: 250px;
-  width: 1411px;
-  height: 607px;
-  font-size: 27.5px;
-}
-
-.ellipse-div {
-  position: absolute;
-  top: calc(50% - 2687.5px);
-  left: calc(50% - 1328px);
-  border-radius: 50%;
-  background: radial-gradient(
-     ellipse at 70% 10%,
-     rgba(92, 71, 220, 0.5),
-     transparent
-  );
-  width: 2634px;
-  height: 1850px;
-
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
-  transition: transform 0.3s ease-in-out;
- }
- 
- .ellipse-div:hover {
- 
-  transform: scale(1);
- }
-.image-1-icon,
-.image-2-icon,
-.image-3-icon {
-  position: absolute;
-  top: 216px;
-  left: 114px;
-  width: 408px;
-  height: 620px;
-  object-fit: cover;
-}
-.image-2-icon,
-.image-3-icon {
-  top: 220px;
-  left: 1456px;
-  width: 323px;
-  height: 684px;
-}
-.image-3-icon {
-  top: 1411px;
-  left: 829px;
-  width: 1076px;
-  height: 844px;
-  margin-top: 30rem;
-}
-.destop {
-  width: 100%;
-  position: relative;
-  background-color: #1d2429;
-  height: 3849px;
-  overflow: hidden;
-  text-align: left;
-  font-size: 25px;
-  color: #fff;
-  font-family: Inter;
-} 
-
-.image-1-icon, .image-2-icon, .image-3-icon {
-  transition: transform 0.3s ease-in-out;
- }
- 
- .image-1-icon:hover, .image-2-icon:hover, .image-3-icon:hover {
-  transform: scale(1.05);
- }
- 
- .rggr-parent, .shape-your-body-parent {
-  animation: slideIn 2s ease-in-out;
- }
+  .image-1-icon, .image-2-icon, .image-3-icon {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .image-1-icon:hover, .image-2-icon:hover, .image-3-icon:hover {
+    transform: scale(1.05);
+  }
+  
+  .rggr-parent, .shape-your-body-parent {
+    animation: slideIn 2s ease-in-out;
+  }
