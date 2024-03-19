@@ -22,6 +22,8 @@ const Login =()=>{
             navigate('/admin');}
             else{
                 navigate('/');
+                localStorage.setItem("isloggedin", true);
+                console.log(localStorage);
             }
             
         }

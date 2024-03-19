@@ -5,7 +5,7 @@ import { useNavigate } from 'react-router-dom'
 const FrameComponent2 = () => {
  
   const navigate=useNavigate();
-  
+  const isloggedin = localStorage.isloggedin;
   const handleSignup = (e) => {
     navigate(`/signup`);
   };
@@ -27,8 +27,8 @@ const FrameComponent2 = () => {
       </ul>
     </div>
     <div class="navbar-login">
-    <Link  to='/login'><button className="login-text"  onClick={handleLogin}>Login</button></Link>
-    <Link to='/signup'><button  className="login-text"  onClick={handleSignup}>Sign up</button></Link>
+      {!isloggedin?(<><Link to='/login'><button className="login-text" onClick={handleLogin}>Login</button></Link><Link to='/signup'><button className="login-text" onClick={handleSignup}>Sign up</button></Link></>):<></>}
+    
       
     </div>
   </nav>
