@@ -179,6 +179,31 @@ def signup():
         return jsonify(error=str(e)), 500
     
     
+@app.route('/login', methods=['POST'])
+def login():
+    data = request.json
+    email = data.get('useremail')
+    password = data.get('userpassword')
+    
+    existing_user = db.session.execute(
+        text("SELECT * FROM users WHERE email = :email"),
+        {"email": email}
+    ).fetchone()
+    
+    if existing_user:
+        stored_password = existing_user[2]  # Assuming 'password' is the column name in the users table
+        if stored_password==password:
+            return jsonify(message="Success")
+        else:
+            return jsonify(message="Incorrect password")
+    else:
+        return jsonify(message="User does not exist")
+    
+  
+    
+    
+    
+    
 
 if __name__ == '__main__':
     app.run(debug=True)

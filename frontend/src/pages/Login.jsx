@@ -13,15 +13,15 @@ const Login =()=>{
     
     Axios.post("http://127.0.0.1:5000/login",{ useremail:email,userpassword:password}).then((response)=>
     {
-        console.log(response.data);
-        setMessage(response.data);
+        console.log(response.data.meassage);
+        setMessage(response.data.message);
         console.log(email);
 
-        if(response.data==="Success"){
+        if(response.data.message==="Success"){
             if(email==="admin@gmail.com"){
             navigate('/admin');}
             else{
-                navigate('/join');
+                navigate('/');
             }
             
         }
