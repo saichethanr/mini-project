@@ -157,6 +157,14 @@ def signup():
     email = data.get('email')
     password = data.get('password')
     
+    existing_user = db.session.execute(
+        text("SELECT * FROM users WHERE email = :email"),
+        {"email": email}
+    ).fetchone()
+    
+    if existing_user:
+        return jsonify(message="User already exists") 
+    
     try:
         db.session.execute(
             text("INSERT INTO users (name, email, password) VALUES (:name, :email, :password)"),

@@ -13,7 +13,7 @@ function SignUp() {
   const navigate=useNavigate();
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [message, setMessage] = useState("");
+  const [mess, setMessage] = useState("");
 
   // Handle form submission
   const handleSubmit = async (e) => {
@@ -35,10 +35,10 @@ function SignUp() {
         password,
       });
       // Display success message
-      setMessage(response.data);
+      setMessage(response.data.message);
       if(response.data.message==="User successfully registered"){
         navigate("/login");
-    }
+      }
     } catch (error) {
       // Display error message
       setMessage(error.response.data.error);
@@ -93,7 +93,7 @@ function SignUp() {
         /></div>
         <button type="submit">Signup</button>
       </form>
-      <h2>{message}</h2>
+      <h2>{mess}</h2>
     </div>
     </div>
     </div>
