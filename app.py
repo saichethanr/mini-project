@@ -35,7 +35,7 @@ def detect_rep_RHR():
             break
         imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
         result = pose.process(imgRGB)
-        points = {}
+        points = {}  #dicionary
         if result.pose_landmarks:
             mpDraw.draw_landmarks(img, result.pose_landmarks, mpPose.POSE_CONNECTIONS)
             for id, lm in enumerate(result.pose_landmarks.landmark):
@@ -76,7 +76,7 @@ def detect_rep_SQUAT():
             frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
             results = pose.process(frame_rgb)
 
-            # Display frame regardless of pose detection
+        
 
             if results.pose_landmarks is not None:
                 x1 = int(results.pose_landmarks.landmark[24].x * width)
@@ -179,6 +179,7 @@ def signup():
         return jsonify(error=str(e)), 500
     
     
+
 @app.route('/login', methods=['POST'])
 def login():
     data = request.json
@@ -191,7 +192,7 @@ def login():
     ).fetchone()
     
     if existing_user:
-        stored_password = existing_user[2]  # Assuming 'password' is the column name in the users table
+        stored_password = existing_user[2]  
         if stored_password==password:
             return jsonify(message="Success")
         else:
@@ -200,9 +201,6 @@ def login():
         return jsonify(message="User does not exist")
     
   
-    
-    
-    
     
 
 if __name__ == '__main__':
