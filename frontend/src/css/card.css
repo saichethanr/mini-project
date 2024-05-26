@@ -36,8 +36,9 @@
     z-index: 10;
     border-radius: 10px;
     text-align: center;
+    margin-left: 37rem;
     margin-bottom: 6rem; /* Increase width of the cards */
-     height: 40rem; /* Ensure minimum height for consistent appearance */
+    height: 40rem; /* Ensure minimum height for consistent appearance */
     transition: all 0.3s ease; /* Smooth transition for hover effect */
   }
   

@@ -9,7 +9,7 @@
       rgba(5, 0, 255, 0)
     );
     width: 2634px;
-    height: 1988px;
+    height: 1000px;
     opacity: 0.3;
   }
   .destop-child,
@@ -331,12 +331,19 @@
     left: 3.1px;
     width: 409.9px;
     height: 42.9px;
+    padding: 70px;
+    padding-top: 400px;
   }
   .rggr-parent {
     width: 703px;
     position: relative;
     height: 518.9px;
     margin-top: 70rem;
+  }
+
+  .contact-form{
+    position: relative;
+    margin-top: 5rem;
   }
   .destop-inner1 {
     position: absolute;

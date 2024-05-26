@@ -13,22 +13,7 @@ const Card = () => {
       <div className="frame-parent">
 
         <div className="vector-parent">
-          <h2>30 DAY PLAN</h2>
-          <CardDetail/>
-          <div className="join-now">Join Now</div>
-      
-        </div>
-
-
-        <div className="vector-parent">
-        <h2>60 DAY PLAN</h2>
-         
-        <CardDetail/>
-          <div className="join-now">Join Now</div>
-        </div>
-
-        <div className="vector-parent">
-        <h2>90 DAY PLAN</h2>
+        <h2>Work Out</h2>
           <CardDetail/> 
           <div className="join-now">Join Now</div>
         </div>

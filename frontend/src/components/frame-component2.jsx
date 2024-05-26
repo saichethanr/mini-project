@@ -22,13 +22,12 @@ const FrameComponent2 = () => {
     <div class="navbar-links">
       <ul>
         <li><a href="#" class="nav-link">Home</a></li>
-        <li><a href="#" class="nav-link">Plans</a></li>
+        <li><a href="#" class="nav-link">Start</a></li>
         <li><a href="#" class="nav-link">Contact</a></li>
       </ul>
     </div>
     <div class="navbar-login">
       {!isloggedin?(<><Link to='/login'><button className="login-text" onClick={handleLogin}>Login</button></Link><Link to='/signup'><button className="login-text" onClick={handleSignup}>Sign up</button></Link></>):<></>}
-    
       
     </div>
   </nav>

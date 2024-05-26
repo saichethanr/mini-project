@@ -1,0 +1,15 @@
+form {
+    width: auto;
+    display: grid;
+    place-items: center;
+    margin-left: 20rem;
+  
+}
+input{
+    margin-bottom: 20px;
+    width: 40rem;
+}
+.head{
+   margin-left: 35rem;
+   width: 400px;
+}
