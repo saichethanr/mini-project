@@ -1,4 +1,4 @@
-form {
+/* form {
     width: auto;
     display: grid;
     place-items: center;
@@ -12,4 +12,108 @@ input{
 .head{
    margin-left: 35rem;
    width: 400px;
-}
+} */
+
+
+/* Contact.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+  }
+  
+  #contact {
+    background-color:rgba(0, 0, 0, 0);
+    padding: 50px 20px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  
+  .head {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2em;
+  }
+  
+  .flex {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #form-container {
+    flex: 1;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f2f2f2;
+  }
+  
+  #form-container h3 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    color: #333;
+  }
+  
+  form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  form input[type="text"],
+  form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: #fff;
+    color: #333;
+  }
+  
+  form textarea {
+    height: 150px;
+    resize: vertical;
+  }
+  
+  button.rounded {
+    width: 100%;
+    padding: 15px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button.rounded:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive Design */
+  
+  @media (min-width: 768px) {
+    .flex {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  
+    #form-container {
+      width: 60%;
+    }
+  }
+  
