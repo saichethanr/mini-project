@@ -128,94 +128,94 @@ def detect_rep_SQUAT():
     cap.release()
     cv2.destroyAllWindows()
 
-def detect_rep_PushUp():
-    # Initialize MediaPipe Pose.
-    mp_pose = mp.solutions.pose
-    pose = mp_pose.Pose()
-    mp_drawing = mp.solutions.drawing_utils
+# def detect_rep_PushUp():
+#     # Initialize MediaPipe Pose.
+#     mp_pose = mp.solutions.pose
+#     pose = mp_pose.Pose()
+#     mp_drawing = mp.solutions.drawing_utils
 
-    # Function to calculate angle between three points.
-    def calculate_angle(a, b, c):
-        a = np.array(a)
-        b = np.array(b)
-        c = np.array(c)
+#     # Function to calculate angle between three points.
+#     def calculate_angle(a, b, c):
+#         a = np.array(a)
+#         b = np.array(b)
+#         c = np.array(c)
         
-        radians = np.arctan2(c[1] - b[1], c[0] - b[0]) - np.arctan2(a[1] - b[1], a[0] - b[0])
-        angle = np.abs(radians * 180.0 / np.pi)
+#         radians = np.arctan2(c[1] - b[1], c[0] - b[0]) - np.arctan2(a[1] - b[1], a[0] - b[0])
+#         angle = np.abs(radians * 180.0 / np.pi)
         
-        if angle > 180.0:
-            angle = 360 - angle
+#         if angle > 180.0:
+#             angle = 360 - angle
         
-        return angle
+#         return angle
 
-    cap = cv2.VideoCapture(0)
+#     cap = cv2.VideoCapture(0)
 
-    pushup_count = 0
-    stage = None
+#     pushup_count = 0
+#     stage = None
 
-    while cap.isOpened():
-        ret, frame = cap.read()
+#     while cap.isOpened():
+#         ret, frame = cap.read()
         
-        if not ret:
-            break
+#         if not ret:
+#             break
 
-        # Convert the BGR image to RGB.
-        image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-        image.flags.writeable = False
+#         # Convert the BGR image to RGB.
+#         image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+#         image.flags.writeable = False
         
-        # Process the image and detect the pose.
-        results = pose.process(image)
+#         # Process the image and detect the pose.
+#         results = pose.process(image)
         
-        # Recolor back to BGR for rendering.
-        image.flags.writeable = True
-        image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
+#         # Recolor back to BGR for rendering.
+#         image.flags.writeable = True
+#         image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
         
-        # Extract landmarks.
-        try:
-            landmarks = results.pose_landmarks.landmark
+#         # Extract landmarks.
+#         try:
+#             landmarks = results.pose_landmarks.landmark
             
-            # Get coordinates.
-            shoulder = [landmarks[mp_pose.PoseLandmark.LEFT_SHOULDER.value].x,
-                        landmarks[mp_pose.PoseLandmark.LEFT_SHOULDER.value].y]
-            elbow = [landmarks[mp_pose.PoseLandmark.LEFT_ELBOW.value].x,
-                    landmarks[mp_pose.PoseLandmark.LEFT_ELBOW.value].y]
-            wrist = [landmarks[mp_pose.PoseLandmark.LEFT_WRIST.value].x,
-                    landmarks[mp_pose.PoseLandmark.LEFT_WRIST.value].y]
+#             # Get coordinates.
+#             shoulder = [landmarks[mp_pose.PoseLandmark.LEFT_SHOULDER.value].x,
+#                         landmarks[mp_pose.PoseLandmark.LEFT_SHOULDER.value].y]
+#             elbow = [landmarks[mp_pose.PoseLandmark.LEFT_ELBOW.value].x,
+#                     landmarks[mp_pose.PoseLandmark.LEFT_ELBOW.value].y]
+#             wrist = [landmarks[mp_pose.PoseLandmark.LEFT_WRIST.value].x,
+#                     landmarks[mp_pose.PoseLandmark.LEFT_WRIST.value].y]
             
-            # Calculate the angle.
-            angle = calculate_angle(shoulder, elbow, wrist)
+#             # Calculate the angle.
+#             angle = calculate_angle(shoulder, elbow, wrist)
             
-            # Visualize the angle.
-            cv2.putText(image, str(angle),
-                        tuple(np.multiply(elbow, [640, 480]).astype(int)),
-                        cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2, cv2.LINE_AA)
+#             # Visualize the angle.
+#             cv2.putText(image, str(angle),
+#                         tuple(np.multiply(elbow, [640, 480]).astype(int)),
+#                         cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2, cv2.LINE_AA)
             
-            # Pushup logic.
-            if angle > 160:
-                stage = "up"
-            if angle < 90 and stage == "up":
-                stage = "down"
-                pushup_count += 1
-                print(f"Pushup Count: {pushup_count}")
+#             # Pushup logic.
+#             if angle > 160:
+#                 stage = "up"
+#             if angle < 90 and stage == "up":
+#                 stage = "down"
+#                 pushup_count += 1
+#                 print(f"Pushup Count: {pushup_count}")
             
-        except:
-            pass
+#         except:
+#             pass
         
-        # Render detections.
-        mp_drawing.draw_landmarks(image, results.pose_landmarks, mp_pose.POSE_CONNECTIONS)
+#         # Render detections.
+#         mp_drawing.draw_landmarks(image, results.pose_landmarks, mp_pose.POSE_CONNECTIONS)
         
-        # Display the pushup count on the frame.
-        cv2.putText(image, f'Pushups: {pushup_count}', (10, 50), 
-                    cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv2.LINE_AA)
+#         # Display the pushup count on the frame.
+#         cv2.putText(image, f'Pushups: {pushup_count}', (10, 50), 
+#                     cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv2.LINE_AA)
         
-        # Display the resulting frame.
-        cv2.imshow('Pushup Counter', image)
+#         # Display the resulting frame.
+#         cv2.imshow('Pushup Counter', image)
         
-        if cv2.waitKey(10) & 0xFF == ord('q'):
-            break
+#         if cv2.waitKey(10) & 0xFF == ord('q'):
+#             break
 
-    cap.release()
-    cv2.destroyAllWindows()
+#     cap.release()
+#     cv2.destroyAllWindows()
     
 
 
