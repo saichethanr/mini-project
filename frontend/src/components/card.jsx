@@ -1,8 +1,16 @@
 import React from "react";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
 import "../css/card.css"; // Assuming you have a separate CSS file for styling
-import dumb from "../img/gym.jpg"
+import dumb from "../img/gym.jpg";
 import CardDetail from "./CardDetail";
+
 const Card = () => {
+  const navigate = useNavigate(); // Initialize the useNavigate hook
+
+  const handleJoinNowClick = () => {
+    navigate("/workout"); // Navigate to the /workout route
+  };
+
   return (
     <div className="frame-div">
       <div className="starting-head">
@@ -11,11 +19,12 @@ const Card = () => {
       </div>
 
       <div className="frame-parent">
-
         <div className="vector-parent">
-        <h2>Work Out</h2>
-          <CardDetail/> 
-          <div className="join-now">Join Now</div>
+          <h2>Work Out</h2>
+          <CardDetail />
+          <div className="join-now" onClick={handleJoinNowClick}>
+            Join Now
+          </div>
         </div>
       </div>
     </div>

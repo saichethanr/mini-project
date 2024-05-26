@@ -6,6 +6,7 @@ import Destop from './components/destop';
 import './css/App.css';
 import SignUp from './pages/SignUp';
 import Login from "./pages/Login"
+import WorkOut from './pages/WorkOut';
 
 function App() {
   return (
@@ -15,6 +16,11 @@ function App() {
       <Route path="/" element={<Destop/>}></Route>
       <Route path="/signup" element={<SignUp/>}></Route>
       <Route path="/login" element={<Login/>}></Route>
+      <Route path="/workout" element={<WorkOut/>}></Route>
+      <Route path="/squat" element={<VideoStream2/>}></Route>
+      <Route path="/lhr" element={<WorkOut/>}></Route>
+      <Route path="/rhr" element={<VideoStream1/>}></Route>
+      <Route path="/pushup" element={<WorkOut/>}></Route>
     </Routes>
     </BrowserRouter>
     </>
