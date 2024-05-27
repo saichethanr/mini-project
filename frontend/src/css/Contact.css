@@ -1,119 +1,69 @@
-/* form {
-    width: auto;
-    display: grid;
-    place-items: center;
-    margin-left: 20rem;
-  
-}
-input{
-    margin-bottom: 20px;
-    width: 40rem;
-}
-.head{
-   margin-left: 35rem;
-   width: 400px;
-} */
-
-
 /* Contact.css */
 
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 0;
-  }
-  
-  #contact {
-    background-color:rgba(0, 0, 0, 0);
-    padding: 50px 20px;
-    margin: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .container {
-    width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
-  
-  .head {
-    color: #333;
-    text-align: center;
-    margin-bottom: 30px;
-    font-size: 2em;
-  }
-  
-  .flex {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  #form-container {
-    flex: 1;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #f2f2f2;
-  }
-  
-  #form-container h3 {
-    text-align: center;
-    margin-bottom: 20px;
-    font-size: 1.5em;
-    color: #333;
-  }
-  
-  form label {
-    display: block;
-    margin-bottom: 5px;
-    font-weight: bold;
-    color: #555;
-  }
-  
-  form input[type="text"],
-  form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    font-size: 1em;
-    background-color: #fff;
-    color: #333;
-  }
-  
-  form textarea {
-    height: 150px;
-    resize: vertical;
-  }
-  
-  button.rounded {
-    width: 100%;
-    padding: 15px;
-    background-color: #007BFF;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  button.rounded:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Responsive Design */
-  
-  @media (min-width: 768px) {
-    .flex {
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  
-    #form-container {
-      width: 60%;
-    }
-  }
-  
+
+
+.container {
+  width: 80%;
+  margin: auto;
+  width: 1200px;
+}
+
+.head {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: white;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#form-container {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 600px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 10px;
+  color: white;
+}
+
+input, textarea {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+input[type="text"], textarea {
+  width: 100%;
+}
+
+textarea {
+  height: 100px;
+}
+
+button.rounded {
+  padding: 10px;
+  background-color: #1e3c72;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.rounded:hover {
+  background-color: #2a5298;
+}

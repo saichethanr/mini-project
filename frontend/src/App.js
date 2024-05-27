@@ -13,7 +13,7 @@ function App() {
     <>
     <BrowserRouter>
     <Routes>
-      <Route path="/" element={<VideoStream2/>}></Route>
+      <Route path="/" element={<Destop/>}></Route>
       <Route path="/signup" element={<SignUp/>}></Route>
       <Route path="/login" element={<Login/>}></Route>
       <Route path="/workout" element={<WorkOut/>}></Route>
