@@ -1,0 +1,38 @@
+/* App.css */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; /* Light background to contrast with the black section */
+  }
+  
+  .v {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .video {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .count {
+    margin-top: 20px;
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    background-image: radial-gradient(circle, #1e3c72, #2a5298); /* Blue radial design */
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
