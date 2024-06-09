@@ -46,7 +46,6 @@ const CardDetail = () => {
       }}
     >
       <Typography variant="h5" component="div" gutterBottom>
-        Workout Plan
       </Typography>
       {exercises.map((exercise) => (
         <Box key={exercise.id} sx={{ mb: 2 }}>
