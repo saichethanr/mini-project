@@ -62,3 +62,11 @@
     color: #ff4141;
     font-weight: 600;
   }
+
+  .signup-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+  }
+  

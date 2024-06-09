@@ -14,8 +14,8 @@ import Contact  from "./Contact";
 const Destop = () => {
   return (
     <div>
-            <div className="destop">
-            <FrameComponent2 />
+        <div className="destop">
+          <FrameComponent2 />
           <div className="destop-child" />
           <div className="destop-item" />
           <div className="destop-inner" />
@@ -42,10 +42,9 @@ const Destop = () => {
               <b className="get-strated">Learn More</b>
             </div>
           </div>
+
           <Card/>
           
-        
-      
           <div className="destop-inner1">
          
             <div className="rggr-parent">
@@ -74,8 +73,6 @@ const Destop = () => {
                 <img className="frame-child3" alt="" src={bpt}/>
                  
                 <Contact className="contact-form"/>
-
-                
               </div>
               
             </div>
