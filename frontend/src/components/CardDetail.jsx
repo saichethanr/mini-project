@@ -49,7 +49,6 @@ const CardDetail = () => {
       </Typography>
       {exercises.map((exercise) => (
         <Box key={exercise.id} sx={{ mb: 2 }}>
-          <Typography variant="h6">{exercise.name}</Typography>
           <img src={exercise.gifUrl} alt={exercise.name} style={{ width: '100%', borderRadius: '8px' }} />
         </Box>
       ))}

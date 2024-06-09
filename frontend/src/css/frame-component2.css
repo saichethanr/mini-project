@@ -33,20 +33,20 @@
 }
 
 .nav-link {
-  color: #ffffff; /* White text color */
+  color: #1f31d7; /* White text color */
   text-decoration: none; /* Remove underline */
   font-size: 1.8rem; /* Larger font size for navbar links */
   transition: color 0.3s, padding 0.3s; /* Smooth transition for color and padding change */
 }
 
 .nav-link:hover {
-  color: #ffffff; /* Lighter text color on hover */
+  color:#1f31d7; /* Lighter text color on hover */
   padding: 20px; /* Add padding on hover */
 }
 
 .nav-link:active {
   z-index: 10;
-  background-color: #f80303; /* Background color on click */
+  background-color: #1f31d7; /* Background color on click */
 }
 
 .navbar-login .login-text {
@@ -57,10 +57,12 @@
   margin: 10px;
   
   transition: color 0.3s, padding 0.3s;
- /* Show pointer cursor on hover */
+
 }
 
 .navbar-login .login-text:hover {
-  background-color:  #f80303;
+  background-color:  #0f46ad;
  /* Underline on hover */
 }
+
+
