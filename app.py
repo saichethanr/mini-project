@@ -24,6 +24,7 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 counter_RHR = 0
+counter_LHR = 0
 counter_PUSHUP = 0
 counter_SQUAT = 0 
 
@@ -209,6 +210,49 @@ def detect_rep_PushUp():
 
     cap.release()
     cv2.destroyAllWindows()
+    
+def detect_rep_LHR():
+    global counter_LHR
+    mpDraw = mp.solutions.drawing_utils
+    mpPose = mp.solutions.pose
+    pose = mpPose.Pose()
+    cap = cv2.VideoCapture(0)
+    up = False
+    while True:
+        success, img = cap.read()
+        if not success:
+            break
+        imgRGB = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
+        result = pose.process(imgRGB)
+        points = {}  # dictionary
+        if result.pose_landmarks:
+            mpDraw.draw_landmarks(img, result.pose_landmarks, mpPose.POSE_CONNECTIONS)
+            for id, lm in enumerate(result.pose_landmarks.landmark):
+                h, w, c = img.shape
+                cx, cy = int(lm.x * w), int(lm.y * h)
+                points[id] = (cx, cy)
+            # Check the position of the left wrist (id 13) relative to the left shoulder (id 11)
+            if not up and points[13][1] < points[11][1]:
+                print("up")
+                up = True
+                counter_LHR += 1
+            elif points[13][1] > points[11][1]:
+                print("down")
+                up = False
+        _, jpeg = cv2.imencode('.jpg', img)
+        frame_bytes = jpeg.tobytes()
+        yield (b'--frame\r\n' b'Content-Type: image/jpeg\r\n\r\n' + frame_bytes + b'\r\n')
+    cap.release()
+    cv2.destroyAllWindows()
+
+@app.route('/video_LHR')
+def video_LHR():
+    return Response(detect_rep_LHR(), mimetype='multipart/x-mixed-replace; boundary=frame')
+
+@app.route('/count_LHR')
+def get_count_LHR():
+    global counter_LHR
+    return str(counter_LHR)
 
 @app.route('/video_PushUp')
 def video_PushUp():
@@ -236,8 +280,6 @@ def video_SQUAT():
 def get_count_SQUAT():
     global counter_SQUAT
     return str(counter_SQUAT)
-
-
 
 
 #handling the post requests
