@@ -45,7 +45,7 @@
   z-index: 10;
   border-radius: 10px;
   text-align: center;
-  width: 1400px; /* Adjust the width of the card */
+  width: 1400px;
   height: 40rem;
   transition: all 0.3s ease;
 }

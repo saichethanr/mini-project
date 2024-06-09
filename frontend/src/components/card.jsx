@@ -1,11 +1,11 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "../css/card.css";
-import dumb from "../img/gym.jpg";
 import CardDetail from "./CardDetail";
 
 const Card = () => {
   const navigate = useNavigate();
+  const isloggedin = localStorage.isloggedin;
 
   const handleJoinNowClick = () => {
     navigate("/workout");
@@ -22,9 +22,15 @@ const Card = () => {
         <div className="vector-parent">
           <h2>Work Out</h2>
           <CardDetail />
-          <div className="join-now" onClick={handleJoinNowClick}>
-            Join Now
-          </div>
+          {isloggedin ? (
+            <div className="join-now" onClick={handleJoinNowClick}>
+              Join Now
+            </div>
+          ) : (
+            <div className="login-to-start">
+              Login to start exercising
+            </div>
+          )}
         </div>
       </div>
     </div>
