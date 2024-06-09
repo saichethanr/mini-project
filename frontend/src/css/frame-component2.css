@@ -55,9 +55,9 @@
   cursor: pointer;
   padding: 20px;
   margin: 10px;
-  
+  margin-right: 2rem;
+  background-color: #1f31d7;
   transition: color 0.3s, padding 0.3s;
-
 }
 
 .navbar-login .login-text:hover {
