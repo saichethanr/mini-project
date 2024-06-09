@@ -14,6 +14,11 @@ const FrameComponent2 = () => {
     navigate(`/login`);
   };  
 
+  const handleLogout = () => {
+    localStorage.removeItem('isloggedin');
+    navigate('/');
+  };
+
   return (
     <nav className="navbar">
       <div className="navbar-brand">
@@ -36,7 +41,9 @@ const FrameComponent2 = () => {
               <button className="login-text" onClick={handleSignup}>Sign up</button>
             </Link>
           </>
-        ) : <></>}
+        ) : (
+          <button className="login-text" onClick={handleLogout}>Logout</button>
+        )}
       </div>
     </nav>
   );
