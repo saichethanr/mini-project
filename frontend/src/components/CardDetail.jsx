@@ -1,14 +1,38 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import sixtydays from "../img/60days.png";
-import thirtydays from "../img/30days.png";
-import ninetydays from "../img/90days.png";
+import "../css/carddetail.css"
+import axios from "axios";
 
 const CardDetail = () => {
+  const [exercises, setExercises] = useState([]);
+
+  useEffect(() => {
+    const fetchExercises = async () => {
+      try {
+        const options = {
+          method: 'GET',
+          url: 'https://exercisedb.p.rapidapi.com/exercises',
+          headers: {
+            'X-RapidAPI-Key': '31ca6d8c30mshfb7e547c5f0e2d8p186657jsn721689d12d6f', 
+            'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
+          }
+        };
+
+        const response = await axios.request(options);
+        const data = response.data;
+
+        // Filter or select specific exercises if needed
+        const selectedExercises = data.slice(5,6); // Get first 4 exercises for example
+        setExercises(selectedExercises);
+      } catch (error) {
+        console.error("Error fetching exercises:", error);
+      }
+    };
+
+    fetchExercises();
+  }, []);
+
   return (
     <Box
       sx={{
@@ -18,26 +42,18 @@ const CardDetail = () => {
         maxWidth: '400px',
         margin: '0 auto',
         textAlign: 'center',
-        backgroundColor: '',
+        backgroundColor: 'transparent',
       }}
     >
       <Typography variant="h5" component="div" gutterBottom>
         Workout Plan
       </Typography>
-      <List>
-        <ListItem>
-          <ListItemText primary="40 Squat/day" />
-        </ListItem>
-        <ListItem>
-          <ListItemText primary="45 ShoulderPress/day" />
-        </ListItem>
-        <ListItem>
-          <ListItemText primary="2 min Plank/day" />
-        </ListItem>
-        <ListItem>
-          <ListItemText primary="30 PushUps/day" />
-        </ListItem>
-      </List>
+      {exercises.map((exercise) => (
+        <Box key={exercise.id} sx={{ mb: 2 }}>
+          <Typography variant="h6">{exercise.name}</Typography>
+          <img src={exercise.gifUrl} alt={exercise.name} style={{ width: '100%', borderRadius: '8px' }} />
+        </Box>
+      ))}
     </Box>
   );
 };
