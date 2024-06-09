@@ -1,77 +1,77 @@
+/* card.css */
+
 .frame-div {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20rem;
+}
 
-    margin-top: 20rem;
-  }
-  .starting-head{
-    display: flex;
-  }
-  .strength-training{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: large;
-  }
-  .our{
-    color: white;
-    margin-right: 30px;
-    margin-bottom: 5rem;
- font-family: Georgia, 'Times New Roman', Times, serif;
-  }
-  .plan{
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    color: #0065fd;
-  }
-  .frame-parent {
-    display: flex;
-    flex-wrap: wrap; /* Allow cards to wrap to the next line if needed */
-    justify-content: center;
-    margin-left: 17rem; /* Center the cards horizontally */
-  }
-  
-  .vector-parent {
-    color: white;
-    padding: 20px;
-    margin: 10px;
-    z-index: 10;
-    border-radius: 10px;
-    text-align: center;
-    margin-left: 37rem;
-    margin-bottom: 6rem; /* Increase width of the cards */
-    height: 40rem; /* Ensure minimum height for consistent appearance */
-    transition: all 0.3s ease; /* Smooth transition for hover effect */
-  }
-  
-  .vector-parent:hover {
-    transform: scale(1.40); /* Scale up the card on hover */
-    z-index: 20;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
-  }
-  
-  .vector-icon,
-  .group-icon {
-    width: 50px;
-    height: 50px;
-  }
-  
-  .lorem-ipsum-is1 {
-    margin-top: 10px;
-  }
-  
-  .join-now {
-    margin-top: 20px;
-    background-color:  #0065fd;
-    color: white;
-    padding: 8px 30px;
-    border-radius: 20px;
-    cursor: pointer;
-    z-index: 10;
-  }
+.starting-head {
+  display: flex;
+}
 
-  .join-now:hover{
-    align-items: center;
-    transform: scale(1.05); 
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-  }
-  
-  
+.strength-training {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: large;
+}
+
+.our {
+  color: white;
+  margin-right: 30px;
+  margin-bottom: 5rem;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.plan {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #0065fd;
+}
+
+.frame-parent {
+  display: flex;
+  justify-content: center; /* Center the cards horizontally */
+  align-items: flex-start; /* Align cards at the start vertically */
+  flex-wrap: wrap; /* Allow cards to wrap to the next line if needed */
+  max-width: 1300px; /* Adjust the max-width of the card parent */
+  margin-top: 2rem; /* Adjust the margin top */
+  margin-left: 51rem;
+}
+
+.vector-parent {
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  z-index: 10;
+  border-radius: 10px;
+  text-align: center;
+  width: 1400px; /* Adjust the width of the card */
+  height: 40rem;
+  transition: all 0.3s ease;
+}
+
+.vector-parent:hover {
+  transform: scale(1.05);
+  z-index: 20;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.lorem-ipsum-is1 {
+  margin-top: 10px;
+}
+
+.join-now {
+  margin-top: 20px;
+  background-color: #0065fd;
+  color: white;
+  padding: 8px 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.join-now:hover {
+  align-items: center;
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}

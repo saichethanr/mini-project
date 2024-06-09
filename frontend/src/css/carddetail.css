@@ -1,23 +1,42 @@
+/* carddetail.css */
 
-/* App.css or a specific CSS file */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: #f5f5f5;
-    margin: 0;
-    padding: 0;
+.card-detail-container {
+    display: flex;
+    overflow-x: auto; /* Allow horizontal scrolling */
+    justify-content: flex-start; /* Align items at the start */
+    padding: 10px; /* Add some padding */
+    flex-wrap: nowrap; /* Prevent wrapping to new lines */
   }
   
-  img {
+  .exercise-box {
+    flex: 0 0 auto;
+    margin-right: 20px; /* Adjust the margin between exercises */
+    text-align: center; /* Center the content */
+  }
+  
+  .exercise-gif {
+    width: 200px; /* Adjust the width of the exercise GIF */
+    height: auto;
     border-radius: 8px;
+    margin-bottom: 10px; /* Add some space below the image */
   }
   
-  h5, h6 {
-    font-family: 'Roboto', sans-serif;
-    margin: 0 0 10px 0;
-    color: #333;
+  .exercise-name {
+    font-size: 16px; /* Adjust the font size */
+    margin-top: 5px; /* Add some space above the exercise name */
   }
   
-  .Box {
-    text-align: center;
+  @media screen and (max-width: 600px) {
+    .exercise-box {
+      margin-right: 10px; /* Adjust margin for smaller screens */
+    }
+  
+    .exercise-gif {
+      width: 150px; /* Adjust image size for smaller screens */
+    }
+  
+    .exercise-name {
+      font-size: 14px; /* Adjust font size for smaller screens */
+    }
   }
   

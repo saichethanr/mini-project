@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
-import "../css/carddetail.css"
 import axios from "axios";
 
 const CardDetail = () => {
@@ -22,8 +21,7 @@ const CardDetail = () => {
         const response = await axios.request(options);
         const data = response.data;
 
-        // Filter or select specific exercises if needed
-        const selectedExercises = data.slice(5,6); // Get first 4 exercises for example
+        const selectedExercises = data.slice(5,6);
         setExercises(selectedExercises);
       } catch (error) {
         console.error("Error fetching exercises:", error);
@@ -34,25 +32,13 @@ const CardDetail = () => {
   }, []);
 
   return (
-    <Box
-      sx={{
-        p: 2,
-        border: '1px solid grey',
-        borderRadius: '8px',
-        maxWidth: '400px',
-        margin: '0 auto',
-        textAlign: 'center',
-        backgroundColor: 'transparent',
-      }}
-    >
-      <Typography variant="h5" component="div" gutterBottom>
-      </Typography>
+    <div className="card-detail-container">
       {exercises.map((exercise) => (
-        <Box key={exercise.id} sx={{ mb: 2 }}>
-          <img src={exercise.gifUrl} alt={exercise.name} style={{ width: '100%', borderRadius: '8px' }} />
+        <Box key={exercise.id} className="exercise-box">
+          <img src={exercise.gifUrl} alt={exercise.name} className="exercise-gif" />
         </Box>
       ))}
-    </Box>
+    </div>
   );
 };
 

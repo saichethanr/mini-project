@@ -1,14 +1,14 @@
 import React from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
-import "../css/card.css"; // Assuming you have a separate CSS file for styling
+import { useNavigate } from "react-router-dom";
+import "../css/card.css";
 import dumb from "../img/gym.jpg";
 import CardDetail from "./CardDetail";
 
 const Card = () => {
-  const navigate = useNavigate(); // Initialize the useNavigate hook
+  const navigate = useNavigate();
 
   const handleJoinNowClick = () => {
-    navigate("/workout"); // Navigate to the /workout route
+    navigate("/workout");
   };
 
   return (
