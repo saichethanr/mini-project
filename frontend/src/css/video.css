@@ -1,0 +1,16 @@
+
+.v {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: black;
+    flex-direction: column;
+  }
+  
+  .count {
+    color: white;
+    font-size: 24px;
+    text-align: center;
+  }
+  

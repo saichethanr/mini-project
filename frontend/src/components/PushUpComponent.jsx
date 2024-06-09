@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import '../css/App.css'
+import '../css/video.css'
 
 function PushUpComponent() {
   const [counter, setCounter] = useState(0);
