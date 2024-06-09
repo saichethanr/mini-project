@@ -343,7 +343,7 @@
 
   .contact-form{
     position: relative;
-    margin-top: 3rem;
+    
   }
   .destop-inner1 {
     position: absolute;
@@ -546,4 +546,8 @@
   
   .rggr-parent, .shape-your-body-parent {
     animation: slideIn 2s ease-in-out;
+  }
+
+  .main {
+    background-color: #1d2429;
   }

@@ -16,6 +16,7 @@ const FrameComponent2 = () => {
 
   const handleLogout = () => {
     localStorage.removeItem('isloggedin');
+    localStorage.removeItem('email');
     navigate('/');
   };
 

@@ -15,8 +15,9 @@ const Login = () => {
       console.log(response.data.message);
       setMessage(response.data.message);
       console.log(email);
-
+  
       if (response.data.message === "Success") {
+        localStorage.setItem("email", email);
         if (email === "admin@gmail.com") {
           navigate('/admin');
         } else {
@@ -27,6 +28,7 @@ const Login = () => {
       }
     });
   }
+  
 
   return (
     <div>

@@ -16,10 +16,6 @@ const Destop = () => {
     <div>
         <div className="destop">
           <FrameComponent2 />
-          <div className="destop-child" />
-          <div className="destop-item" />
-          <div className="destop-inner" />
-          <div className="rectangle-div" />
           <div className="start-your-training-with-us-parent">
             <div className="start-your-training-container">
               <p className="start-your">START YOUR</p>
@@ -44,9 +40,7 @@ const Destop = () => {
           </div>
 
           <Card/>
-          
           <div className="destop-inner1">
-         
             <div className="rggr-parent">
               <div className="rggr">
                 <p className="start-your">{`WHY CHOOSE `}</p>
@@ -72,13 +66,10 @@ const Destop = () => {
                 <div className="open-24-hours">Open 24 Hours</div>
                 <img className="frame-child3" alt="" src={bpt}/>
                  
-                <Contact className="contact-form"/>
               </div>
               
             </div>
-            
-          </div>
-
+            </div>
           <div className="shape-your-body-parent">
             <div className="shape-your-body-container">
               <p className="start-your">SHAPE YOUR</p>
@@ -91,7 +82,7 @@ const Destop = () => {
               <b className="learn-more1">Learn More</b>
             </div>
           </div>
-          <div className="ellipse-div" />
+          
           <img className="image-1-icon" alt="" src={leftMainImage} />
           <img className="image-2-icon" alt="" src={RightMainImage} />
           <img className="image-3-icon" alt="" src={BottomImage} />

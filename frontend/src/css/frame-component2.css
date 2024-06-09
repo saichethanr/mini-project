@@ -1,7 +1,7 @@
 /* frame-component2.css */
 
 .navbar {
-  background-color: rgba(46, 54, 60, 0);; /* Black background color */
+  background-color: rgba(46, 54, 60, 0); /* Black background color */
   padding: 15px 20px; /* Padding for the navbar */
   display: flex; /* Flex layout for better alignment */
   justify-content: space-between; /* Space between items */

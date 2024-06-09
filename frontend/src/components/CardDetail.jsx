@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import axios from "axios";
+import "../css/carddetail.css"
 
 const CardDetail = () => {
   const [exercises, setExercises] = useState([]);
@@ -21,7 +22,7 @@ const CardDetail = () => {
         const response = await axios.request(options);
         const data = response.data;
 
-        const selectedExercises = data.slice(5,6);
+        const selectedExercises = data.slice(5,9);
         setExercises(selectedExercises);
       } catch (error) {
         console.error("Error fetching exercises:", error);

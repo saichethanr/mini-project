@@ -1,6 +1,7 @@
 /* carddetail.css */
 
 .card-detail-container {
+    height: 400px;
     display: flex;
     overflow-x: auto; /* Allow horizontal scrolling */
     justify-content: flex-start; /* Align items at the start */
@@ -15,7 +16,7 @@
   }
   
   .exercise-gif {
-    width: 200px; /* Adjust the width of the exercise GIF */
+    width: 300px; /* Adjust the width of the exercise GIF */
     height: auto;
     border-radius: 8px;
     margin-bottom: 10px; /* Add some space below the image */

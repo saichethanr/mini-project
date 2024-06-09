@@ -1,77 +1,48 @@
 /* card.css */
 
-.frame-div {
+.main {
+  margin-top: 75rem;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 20rem;
 }
 
-.starting-head {
+.parent {
   display: flex;
-}
-
-.strength-training {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: large;
-}
-
-.our {
-  color: white;
-  margin-right: 30px;
-  margin-bottom: 5rem;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.plan {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color: #0065fd;
-}
-
-.frame-parent {
-  display: flex;
-  justify-content: center; /* Center the cards horizontally */
-  align-items: flex-start; /* Align cards at the start vertically */
-  flex-wrap: wrap; /* Allow cards to wrap to the next line if needed */
-  max-width: 1300px; /* Adjust the max-width of the card parent */
-  margin-top: 2rem; /* Adjust the margin top */
-  margin-left: 51rem;
-}
-
-.vector-parent {
-  color: white;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Adjusted for better spacing */
+  background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent black background */
   padding: 20px;
-  margin: 10px;
-  z-index: 10;
-  border-radius: 10px;
-  text-align: center;
-  width: 1400px;
-  height: 40rem;
-  transition: all 0.3s ease;
+  border-radius: 20px;
+  box-shadow: 0 10px 810px rgba(255, 255, 255, 0.3); /* Add some shadow for depth */
 }
 
-.vector-parent:hover {
-  transform: scale(1.05);
-  z-index: 20;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+.heading {
+  font-size: 45px; /* Adjust font size as needed */
+  font-weight: bold; /* Make the heading bold */
+  color: white; /* Ensure the text is visible on the dark background */
 }
 
-.lorem-ipsum-is1 {
-  margin-top: 10px;
+.excercises {
+  height: 400px;
+  width: 100%; /* Ensure it takes full width of the parent */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .join-now {
-  margin-top: 20px;
   background-color: #0065fd;
   color: white;
   padding: 8px 30px;
   border-radius: 20px;
   cursor: pointer;
-  z-index: 10;
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
 }
 
 .join-now:hover {
-  align-items: center;
   transform: scale(1.05);
   box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }

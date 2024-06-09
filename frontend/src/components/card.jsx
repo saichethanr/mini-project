@@ -12,27 +12,19 @@ const Card = () => {
   };
 
   return (
-    <div className="frame-div">
-      <div className="starting-head">
-        <h1 className="our">OUR </h1>
-        <h1 className="plan">PLANS</h1>
-      </div>
+    <div className="main">
 
-      <div className="frame-parent">
-        <div className="vector-parent">
-          <h2>Work Out</h2>
-          <CardDetail />
-          {isloggedin ? (
-            <div className="join-now" onClick={handleJoinNowClick}>
-              Join Now
-            </div>
-          ) : (
-            <div className="login-to-start">
-              Login to start exercising
-            </div>
-          )}
-        </div>
+    <div className="parent">
+      <div className="heading">
+        Work Out
       </div>
+      <div className="excercises">
+        <CardDetail />
+      </div>
+      <div className="join-now" onClick={handleJoinNowClick}>
+          Join Now
+      </div>
+    </div>
     </div>
   );
 };
