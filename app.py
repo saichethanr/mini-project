@@ -1,8 +1,12 @@
+#camera feed
 import cv2
+#points generationn
 import mediapipe as mp
 import base64
+#comnnection with postgresql
 from sqlalchemy import text
 import threading
+#flask is the backend
 from flask import Flask,Response,request,jsonify
 from flask_socketio import SocketIO
 from flask_cors import CORS,cross_origin
@@ -20,7 +24,8 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
 counter_RHR = 0
-counter_SQUAT = 0
+counter_PUSHUP = 0
+counter_SQUAT = 0 
 
 def detect_rep_RHR():
     global counter_RHR
@@ -128,96 +133,91 @@ def detect_rep_SQUAT():
     cap.release()
     cv2.destroyAllWindows()
 
-# def detect_rep_PushUp():
-#     # Initialize MediaPipe Pose.
-#     mp_pose = mp.solutions.pose
-#     pose = mp_pose.Pose()
-#     mp_drawing = mp.solutions.drawing_utils
 
-#     # Function to calculate angle between three points.
-#     def calculate_angle(a, b, c):
-#         a = np.array(a)
-#         b = np.array(b)
-#         c = np.array(c)
-        
-#         radians = np.arctan2(c[1] - b[1], c[0] - b[0]) - np.arctan2(a[1] - b[1], a[0] - b[0])
-#         angle = np.abs(radians * 180.0 / np.pi)
-        
-#         if angle > 180.0:
-#             angle = 360 - angle
-        
-#         return angle
 
-#     cap = cv2.VideoCapture(0)
+def detect_rep_PushUp():
+    global counter_PUSHUP
+    mp_drawing = mp.solutions.drawing_utils
+    mp_pose = mp.solutions.pose
 
-#     pushup_count = 0
-#     stage = None
+    cap = cv2.VideoCapture(0)
+    up = False
+    down = False
 
-#     while cap.isOpened():
-#         ret, frame = cap.read()
-        
-#         if not ret:
-#             break
+    # Initialize Mediapipe Pose
+    with mp_pose.Pose(static_image_mode=False) as pose:
+        while True:
+            ret, frame = cap.read()
+            if not ret:
+                break
 
-#         # Convert the BGR image to RGB.
-#         image = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
-#         image.flags.writeable = False
-        
-#         # Process the image and detect the pose.
-#         results = pose.process(image)
-        
-#         # Recolor back to BGR for rendering.
-#         image.flags.writeable = True
-#         image = cv2.cvtColor(image, cv2.COLOR_RGB2BGR)
-        
-#         # Extract landmarks.
-#         try:
-#             landmarks = results.pose_landmarks.landmark
-            
-#             # Get coordinates.
-#             shoulder = [landmarks[mp_pose.PoseLandmark.LEFT_SHOULDER.value].x,
-#                         landmarks[mp_pose.PoseLandmark.LEFT_SHOULDER.value].y]
-#             elbow = [landmarks[mp_pose.PoseLandmark.LEFT_ELBOW.value].x,
-#                     landmarks[mp_pose.PoseLandmark.LEFT_ELBOW.value].y]
-#             wrist = [landmarks[mp_pose.PoseLandmark.LEFT_WRIST.value].x,
-#                     landmarks[mp_pose.PoseLandmark.LEFT_WRIST.value].y]
-            
-#             # Calculate the angle.
-#             angle = calculate_angle(shoulder, elbow, wrist)
-            
-#             # Visualize the angle.
-#             cv2.putText(image, str(angle),
-#                         tuple(np.multiply(elbow, [640, 480]).astype(int)),
-#                         cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2, cv2.LINE_AA)
-            
-#             # Pushup logic.
-#             if angle > 160:
-#                 stage = "up"
-#             if angle < 90 and stage == "up":
-#                 stage = "down"
-#                 pushup_count += 1
-#                 print(f"Pushup Count: {pushup_count}")
-            
-#         except:
-#             pass
-        
-#         # Render detections.
-#         mp_drawing.draw_landmarks(image, results.pose_landmarks, mp_pose.POSE_CONNECTIONS)
-        
-#         # Display the pushup count on the frame.
-#         cv2.putText(image, f'Pushups: {pushup_count}', (10, 50), 
-#                     cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv2.LINE_AA)
-        
-#         # Display the resulting frame.
-#         cv2.imshow('Pushup Counter', image)
-        
-#         if cv2.waitKey(10) & 0xFF == ord('q'):
-#             break
+            height, width, _ = frame.shape
+            frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            results = pose.process(frame_rgb)
 
-#     cap.release()
-#     cv2.destroyAllWindows()
-    
+            if results.pose_landmarks is not None:
+                landmarks = results.pose_landmarks.landmark
+                shoulder = [landmarks[mp_pose.PoseLandmark.LEFT_SHOULDER.value].x * width,
+                            landmarks[mp_pose.PoseLandmark.LEFT_SHOULDER.value].y * height]
+                elbow = [landmarks[mp_pose.PoseLandmark.LEFT_ELBOW.value].x * width,
+                         landmarks[mp_pose.PoseLandmark.LEFT_ELBOW.value].y * height]
+                wrist = [landmarks[mp_pose.PoseLandmark.LEFT_WRIST.value].x * width,
+                         landmarks[mp_pose.PoseLandmark.LEFT_WRIST.value].y * height]
 
+                def calculate_angle(a, b, c):
+                    a = np.array(a)
+                    b = np.array(b)
+                    c = np.array(c)
+                    radians = np.arctan2(c[1] - b[1], c[0] - b[0]) - np.arctan2(a[1] - b[1], a[0] - b[0])
+                    angle = np.abs(radians * 180.0 / np.pi)
+                    if angle > 180.0:
+                        angle = 360 - angle
+                    return angle
+
+                angle = calculate_angle(shoulder, elbow, wrist)
+
+                if angle > 160:
+                    up = True
+                if up and not down and angle < 90:
+                    down = True
+                if up and down and angle > 160:
+                    counter_PUSHUP += 1
+                    up = False
+                    down = False
+
+                # Visualize the angle
+                cv2.putText(frame, str(int(angle)),
+                            tuple(np.multiply(elbow, [1, 1]).astype(int)),
+                            cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2, cv2.LINE_AA)
+
+                # Draw landmarks and connections
+                mp_drawing.draw_landmarks(frame, results.pose_landmarks, mp_pose.POSE_CONNECTIONS)
+
+            # Display push-up count
+            cv2.putText(frame, f'Push-ups: {counter_PUSHUP}', (10, 50),
+                        cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2, cv2.LINE_AA)
+
+            # Encode the frame for streaming
+            _, jpeg = cv2.imencode('.jpg', frame)
+            frame_bytes = jpeg.tobytes()
+            yield (b'--frame\r\n'
+                   b'Content-Type: image/jpeg\r\n\r\n' + frame_bytes + b'\r\n')
+
+            # Break the loop if ESC key is pressed
+            if cv2.waitKey(1) & 0xFF == 27:
+                break
+
+    cap.release()
+    cv2.destroyAllWindows()
+
+@app.route('/video_PushUp')
+def video_PushUp():
+    return Response(detect_rep_PushUp(), mimetype='multipart/x-mixed-replace; boundary=frame')
+
+@app.route('/count_PushUp')
+def get_count_PushUp():
+    global counter_PUSHUP
+    return str(counter_PUSHUP)
 
 @app.route('/video_RHR')
 def video_RHR():

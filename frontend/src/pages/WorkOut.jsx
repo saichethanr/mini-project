@@ -10,8 +10,8 @@ const WorkOut = () => {
   };
 
   const exercises = [
-    { name: 'SQUATS', route: '/squats' },
-    { name: 'PUSHUP', route: '/pushups' },
+    { name: 'SQUATS', route: '/squat' },
+    { name: 'PUSHUP', route: '/pushup' },
     { name: 'LEFT HAND RAISE', route: '/lhr' },
     { name: 'RIGHT HAND RAISE', route: '/rhr' },
   ];
