@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import '../css/video.css'
+import '../css/video.css';
 
 function PushUpComponent() {
   const [counter, setCounter] = useState(0);
+  const [exerciseCount, setExerciseCount] = useState(0); // Add exerciseCount state
 
   useEffect(() => {
     const fetchCounter = async () => {
@@ -15,10 +16,30 @@ function PushUpComponent() {
       }
     };
 
-    const interval = setInterval(fetchCounter, 1000); 
-    return () => clearInterval(interval); 
+    const interval = setInterval(fetchCounter, 1000); // Fetch counter every second
+    return () => clearInterval(interval); // Cleanup function
 
-  }, []);
+  }, []); // Empty dependency array ensures useEffect runs only once
+
+  useEffect(() => {
+    if (counter >= 5) {
+      const email = localStorage.getItem('email');
+      if (email) {
+        updateStreak(email);
+      }
+      setExerciseCount(counter); // Reset or update exercise count based on your logic
+    }
+  }, [counter]);
+
+  const updateStreak = async (email) => {
+    try {
+      const response = await axios.post('http://127.0.0.1:5000/update_streak', { email });
+      console.log(response.data.message);
+    } 
+    catch (error) {
+      console.error('Error updating streak:', error);
+    }
+  };
 
   return (
     <div>
