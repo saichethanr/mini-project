@@ -1,5 +1,6 @@
 import FrameComponent2 from "./frame-component2";
 import FrameComponent1 from "./frame-component1";
+import React, { useEffect, useState } from 'react';
 import Card from "./card";
 import "../css/destop.css";
 import bpt from "../img/wcheck.jpg"
@@ -12,6 +13,32 @@ import Contact  from "./Contact";
 
 
 const Destop = () => {
+    useEffect(() => {
+      const interval = setInterval(() => {
+          var loggedInEmail = localStorage.getItem('email');
+          if (loggedInEmail) {
+              fetch('http://127.0.0.1:5000/update_streak', {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json'
+                  },
+                  body: JSON.stringify({ email: loggedInEmail })
+              })
+              .then(response => response.json())
+              .then(data => {
+                  console.log(data);
+              })
+              .catch(error => {
+                  console.error('Error:', error);
+              });
+          }
+      }, 60000);
+
+      return () => clearInterval(interval);
+  }, []); 
+
+
+
   return (
     <div>
         <div className="destop">
@@ -86,7 +113,6 @@ const Destop = () => {
           <img className="image-1-icon" alt="" src={leftMainImage} />
           <img className="image-2-icon" alt="" src={RightMainImage} />
           <img className="image-3-icon" alt="" src={BottomImage} />
-            
         </div>
      
         

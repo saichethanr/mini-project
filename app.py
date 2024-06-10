@@ -3,6 +3,7 @@ import cv2
 #points generationn
 import mediapipe as mp
 import base64
+from datetime import date
 #comnnection with postgresql
 from sqlalchemy import text
 import threading
@@ -20,7 +21,6 @@ socketio = SocketIO(app, cors_allowed_origins="*")
 
 app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://sai:1445@127.0.0.1:5432/Gym'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
 db = SQLAlchemy(app)
 
 counter_RHR = 0
@@ -333,8 +333,50 @@ def login():
     else:
         return jsonify(message="User does not exist")
     
+
+
+
+@app.route('/update_streak', methods=['POST'])
+def update_streak():
+    data = request.json
+    user_email = data.get('email')
   
-    
+    existing_user = db.session.execute(
+        text("SELECT * FROM users WHERE email = :email"),
+        {"email": user_email}
+    ).fetchone()
+
+    if existing_user:
+        db_date = db.session.execute(
+            text("SELECT lastday from streak where email = :useremail"),
+            {"useremail": user_email}
+        ).fetchone()
+        today = date.today()
+        print(db_date)
+        print(today)
+        if db_date is not None and db_date[0] == today:
+            return jsonify({"message": "streak already updated"})
+        
+        existing_streak_entry = db.session.execute(
+            text("SELECT * FROM streak WHERE email = :email AND lastday = :lastday"),
+            {"email": user_email, "lastday": today}
+        ).fetchone()
+
+        if existing_streak_entry:
+            db.session.execute(
+                text("UPDATE streak SET streak = streak + 1 WHERE email = :email AND lastday = :lastday"),
+                {"email": user_email, "lastday": today}
+            )
+        else:
+            db.session.execute(
+                text("INSERT INTO streak (email, lastday, streak) VALUES (:email, :lastday, 1)"),
+                {"email": user_email, "lastday": today}
+            )
+        db.session.commit()
+        return jsonify({"message": "Streak updated successfully"})
+    else:
+        return jsonify({"error": "User does not exist"}), 404
+
 
 if __name__ == '__main__':
     app.run(debug=True)
