@@ -270,7 +270,8 @@ def video_RHR():
 @app.route('/count_RHR')
 def get_count_RHR():
     global counter_RHR
-    return str(counter_RHR)
+    cnt = counter_RHR
+    return str(cnt)
 
 @app.route('/video_SQUAT')
 def video_SQUAT():

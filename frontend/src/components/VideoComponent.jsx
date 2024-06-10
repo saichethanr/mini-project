@@ -3,12 +3,14 @@ import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFire } from '@fortawesome/free-solid-svg-icons';
 import '../css/video.css';
+import { useNavigate } from 'react-router-dom';
 
 function VideoStream1() {
   const [counter, setCounter] = useState(0);
   const [exerciseCount, setExerciseCount] = useState(0);
   const [streakCount, setStreakCount] = useState(0);
-
+  const navigate = useNavigate();
+  
   useEffect(() => {
     const fetchCounter = async () => {
       try {
@@ -65,7 +67,7 @@ function VideoStream1() {
     <div>
       <div className='streak-container'>
         <FontAwesomeIcon icon={faFire} className='fire-icon' />
-        <h2 className='streak'>{streakCount}</h2>
+        <strong className='streak'>{streakCount}</strong>
       </div>
       <div className='v'>
         <iframe
