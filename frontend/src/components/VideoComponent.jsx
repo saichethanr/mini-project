@@ -16,10 +16,10 @@ function VideoStream1() {
       }
     };
 
-    const interval = setInterval(fetchCounter, 1000); // Fetch counter every second
-    return () => clearInterval(interval); // Cleanup function
+    const interval = setInterval(fetchCounter, 1000); 
+    return () => clearInterval(interval); 
 
-  }, []); // Empty dependency array ensures useEffect runs only once
+  }, []); 
 
   useEffect(() => {
     if (counter >= 5) {
@@ -27,7 +27,7 @@ function VideoStream1() {
       if (email) {
         updateStreak(email);
       }
-      setExerciseCount(counter); // Reset or update exercise count based on your logic
+      setExerciseCount(counter);
     }
   }, [counter]);
 
