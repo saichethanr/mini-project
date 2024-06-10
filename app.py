@@ -376,6 +376,32 @@ def update_streak():
         return jsonify({"message": "Streak updated successfully"})
     else:
         return jsonify({"error": "User does not exist"}), 404
+    
+    
+@app.route('/streak_cnt', methods=['POST'])
+def streak_cnt():
+    data = request.json
+    email = data.get('email')
+    
+    if not email:
+        return jsonify({'error': 'Email is required'}), 400
+    
+    try:
+        streak_result = db.session.execute(
+            text("SELECT streak FROM streak WHERE email = :email"),
+            {"email": email}
+        ).fetchone()
+        
+        if streak_result:
+            streak_value = streak_result[0]
+            return jsonify({'streak': streak_value})
+        else:
+            return jsonify({'error': 'Email not found'}), 404
+    except Exception as e:
+        return jsonify({'error': str(e)}), 500
+
+
+
 
 
 if __name__ == '__main__':
