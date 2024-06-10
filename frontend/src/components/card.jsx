@@ -5,7 +5,7 @@ import CardDetail from "./CardDetail";
 
 const Card = () => {
   const navigate = useNavigate();
-  const isloggedin = localStorage.isloggedin;
+  const isLoggedin = localStorage.getItem('isloggedin') === 'true'; // Ensure this matches how you're storing the login status
 
   const handleJoinNowClick = () => {
     navigate("/workout");
@@ -13,18 +13,23 @@ const Card = () => {
 
   return (
     <div className="main">
-
-    <div className="parent">
-      <div className="heading">
-        Work Out
+      <div className="parent">
+        <div className="heading">
+          Work Out
+        </div>
+        <div className="exercises">
+          <CardDetail />
+        </div>
+        {isLoggedin ? (
+          <div className="join-now" onClick={handleJoinNowClick}>
+            Join Now
+          </div>
+        ) : (
+          <div className="login-message">
+            Login to start working out
+          </div>
+        )}
       </div>
-      <div className="excercises">
-        <CardDetail />
-      </div>
-      <div className="join-now" onClick={handleJoinNowClick}>
-          Join Now
-      </div>
-    </div>
     </div>
   );
 };
