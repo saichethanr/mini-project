@@ -1,60 +1,15 @@
-body, html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f0f0f0; /* Light background to contrast with the black section */
-}
 
 .v {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: 100%;
-}
-
-.video {
-  border: none;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  height: 90vh;
+  background-color: black;
+  flex-direction: column;
 }
 
 .count {
-  margin-top: 20px;
-  text-align: center;
-  padding: 20px;
-  background-color: black;
-  background-image: radial-gradient(circle, #1e3c72, #2a5298); /* Blue radial design */
   color: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-/* Updated CSS for Streak Count */
-.streak-container {
-  position: absolute;
-  top: 10px;
-  right: 10px; /* Position streak on the top right */
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 10px;
-  border-radius: 5px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Matching the video shadow for consistency */
-  display: flex;
-  align-items: center;
-}
-
-.fire-icon {
-  color: #ff4500; /* Fire color */
-  margin-right: 10px;
-  font-size: 40px; /* Adjust the font size of the fire icon */
-}
-
-.streak {
-  margin: 0;
-  font-size: 90px; /* Adjust the font size of the streak count */
-  color: #ffffff;
+  font-size: 24px;
+  text-align: center;
 }
