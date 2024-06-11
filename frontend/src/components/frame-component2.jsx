@@ -8,6 +8,7 @@ const FrameComponent2 = () => {
   const navigate = useNavigate();
   const isloggedin = localStorage.isloggedin;
   const [streakCount, setStreakCount] = useState(0);
+  const [hoverIndex, setHoverIndex] = useState(null);
 
   useEffect(() => {
     if (isloggedin) {
@@ -39,6 +40,14 @@ const FrameComponent2 = () => {
     navigate('/');
   };
 
+  const handleMouseEnter = (index) => {
+    setHoverIndex(index);
+  };
+
+  const handleMouseLeave = () => {
+    setHoverIndex(null);
+  };
+
   const styles = {
     navbar: {
       backgroundColor: 'rgba(46, 54, 60, 0)',
@@ -62,12 +71,16 @@ const FrameComponent2 = () => {
       padding: 0,
     },
     navLink: {
-      color: '#1f31d7',
+      color: '#ffffff',
       textDecoration: 'none',
       fontSize: '1.8rem',
       transition: 'color 0.3s, padding 0.3s',
-      marginLeft: '20px', // margin to separate the links
-      padding: '40px', // added padding for better spacing
+      marginLeft: '20px',
+      padding: '40px',
+    },
+    navLinkHover: {
+      color: '#1f31d7',
+      paddingLeft: '50px',
     },
     navbarLogin: {
       color: '#000000',
@@ -94,7 +107,7 @@ const FrameComponent2 = () => {
     streakContainer: {
       display: 'flex',
       alignItems: 'center',
-      marginRight: '20px', // added margin for spacing
+      marginRight: '20px',
     },
     authContainer: {
       display: 'flex',
@@ -108,9 +121,21 @@ const FrameComponent2 = () => {
         <b className="brand-text">GYM-EYE</b>
       </div>
       <div className="navbar-links" style={styles.navbarLinks}>
-        <a href="#" className="nav-link" style={styles.navLink}>Home</a> 
-        <a href="#" className="nav-link" style={styles.navLink}>Start</a>
-        <a href="#" className="nav-link" style={styles.navLink}>Contact</a>
+        {['Home', 'Start', 'Contact'].map((link, index) => (
+          <a
+            key={link}
+            href="#"
+            className="nav-link"
+            style={{
+              ...styles.navLink,
+              ...(hoverIndex === index ? styles.navLinkHover : {}),
+            }}
+            onMouseEnter={() => handleMouseEnter(index)}
+            onMouseLeave={handleMouseLeave}
+          >
+            {link}
+          </a>
+        ))}
       </div>
       <div className="auth-container" style={styles.authContainer}>
         {!isloggedin ? (
