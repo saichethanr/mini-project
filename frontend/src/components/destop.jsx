@@ -92,7 +92,7 @@ const Destop = () => {
               <div className="open-24-hours-parent">
                 <div className="open-24-hours">Open 24 Hours</div>
                 <img className="frame-child3" alt="" src={bpt}/>
-                 
+                    <Contact/>
               </div>
               
             </div>

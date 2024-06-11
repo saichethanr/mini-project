@@ -334,9 +334,6 @@ def login():
     else:
         return jsonify(message="User does not exist")
     
-
-
-
 @app.route('/update_streak', methods=['POST'])
 def update_streak():
     data = request.json
@@ -349,26 +346,28 @@ def update_streak():
 
     if existing_user:
         db_date = db.session.execute(
-            text("SELECT lastday from streak where email = :useremail"),
+            text("SELECT lastday FROM streak WHERE email = :useremail"),
             {"useremail": user_email}
         ).fetchone()
         today = date.today()
         print(db_date)
         print(today)
         if db_date is not None and db_date[0] == today:
-            return jsonify({"message": "streak already updated"})
+            return jsonify({"message": "Streak already updated"})
         
-        existing_streak_entry = db.session.execute(
-            text("SELECT * FROM streak WHERE email = :email AND lastday = :lastday"),
-            {"email": user_email, "lastday": today}
-        ).fetchone()
+        existing_streak_entry = db_date
 
         if existing_streak_entry:
-            db.session.execute(
-                text("UPDATE streak SET streak = streak + 1 WHERE email = :email AND lastday = :lastday"),
-                {"email": user_email, "lastday": today}
-            )
+            # If the streak entry exists, update the lastday and increment the streak count if lastday is different from today
+            if existing_streak_entry[0] != today:
+                db.session.execute(
+                    text("UPDATE streak SET lastday = :lastday, streak = streak + 1 WHERE email = :email"),
+                    {"email": user_email, "lastday": today}
+                )
+            else:
+                return jsonify({"message": "Streak already updated for today"})
         else:
+            # If the streak entry does not exist, insert a new one
             db.session.execute(
                 text("INSERT INTO streak (email, lastday, streak) VALUES (:email, :lastday, 1)"),
                 {"email": user_email, "lastday": today}
@@ -377,8 +376,8 @@ def update_streak():
         return jsonify({"message": "Streak updated successfully"})
     else:
         return jsonify({"error": "User does not exist"}), 404
-    
-    
+
+
 @app.route('/streak_cnt', methods=['POST'])
 def streak_cnt():
     data = request.json
@@ -403,7 +402,24 @@ def streak_cnt():
 
 
 
+@app.route('/contact', methods=['POST'])
+def contact():
+    data = request.json
+    email = data.get('email')
+    name = data.get('name')
+    subject = data.get('subject')
+    message = data.get('message')
 
+    if not email or not name or not subject or not message:
+        return jsonify({'success': False, 'message': 'All fields are required'}), 400
+
+    db.session.execute(
+        text("INSERT INTO contact (email, name, subject, message) VALUES (:email, :name, :subject, :message)"),
+        {"email": email, "name": name, "subject": subject, "message": message}
+    )
+    db.session.commit()
+
+    return jsonify({'success': True, 'message': 'Message sent successfully'})
 
 if __name__ == '__main__':
     app.run(debug=True)
