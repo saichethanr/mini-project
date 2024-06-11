@@ -2,8 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFire } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const FrameComponent2 = () => {
   const navigate = useNavigate();
@@ -43,12 +42,12 @@ const FrameComponent2 = () => {
   const styles = {
     navbar: {
       backgroundColor: 'rgba(46, 54, 60, 0)',
-      padding: '15px 20px',
+      padding: '15px 90px',
       display: 'flex',
       justifyContent: 'space-between',
       alignItems: 'center',
       zIndex: 30,
-      width: '198vh',
+      width: '100%',
       position: 'fixed',
     },
     navbarBrand: {
@@ -57,6 +56,7 @@ const FrameComponent2 = () => {
       color: '#ffffff',
     },
     navbarLinks: {
+      display: 'flex',
       listStyle: 'none',
       margin: 0,
       padding: 0,
@@ -66,19 +66,17 @@ const FrameComponent2 = () => {
       textDecoration: 'none',
       fontSize: '1.8rem',
       transition: 'color 0.3s, padding 0.3s',
-    },
-    navLinkHover: {
-      color: '#1f31d7',
-      padding: '20px',
+      marginLeft: '20px', // margin to separate the links
+      padding: '40px', // added padding for better spacing
     },
     navbarLogin: {
       color: '#000000',
       fontSize: '1.3rem',
       cursor: 'pointer',
-      padding: '20px',
-      margin: '10px',
+      padding: '10px 20px',
+      margin: '0 10px',
       backgroundColor: '#1f31d7',
-      transition: 'color 0.3s, padding 0.3s',
+      transition: 'background-color 0.3s',
     },
     navbarLoginHover: {
       backgroundColor: '#0f46ad',
@@ -91,9 +89,14 @@ const FrameComponent2 = () => {
     streakText: {
       margin: 0,
       fontSize: '1.3rem',
-      color: '#000000',
+      color: '#FFFFFF',
     },
     streakContainer: {
+      display: 'flex',
+      alignItems: 'center',
+      marginRight: '20px', // added margin for spacing
+    },
+    authContainer: {
       display: 'flex',
       alignItems: 'center',
     },
@@ -105,17 +108,11 @@ const FrameComponent2 = () => {
         <b className="brand-text">GYM-EYE</b>
       </div>
       <div className="navbar-links" style={styles.navbarLinks}>
-     
-          <span> 
-            <a href="#" className="nav-link" style={styles.navLink}>Home</a> 
-            <a href="#" className="nav-link" style={styles.navLink}>Start</a>
-            <a href="#" className="nav-link" style={styles.navLink}>Contact</a>
-          </span>
-          
-          
-       
+        <a href="#" className="nav-link" style={styles.navLink}>Home</a> 
+        <a href="#" className="nav-link" style={styles.navLink}>Start</a>
+        <a href="#" className="nav-link" style={styles.navLink}>Contact</a>
       </div>
-      <div className="navbar-login">
+      <div className="auth-container" style={styles.authContainer}>
         {!isloggedin ? (
           <>
             <Link to='/login'>
