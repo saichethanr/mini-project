@@ -1,7 +1,10 @@
 /* Contact.css */
 
 
-
+#contact{
+  width: 900px;
+  margin-left: 12rem;
+}
 .container {
   width: 80%;
   margin: auto;
